@@ -37,7 +37,7 @@ Dit ging goed:
 Dit doe ik volgende keer anders:
 Dit kan ik nu zelfstandig:
 `;
-const work=document.getElementById('work');if(work){work.value=lessonConfig.template||template;document.getElementById('template').onclick=()=>{if(work.value===template||confirm('Je huidige tekst vervangen door het lege sjabloon?'))work.value=lessonConfig.template||template};document.getElementById('download').onclick=()=>{const url=URL.createObjectURL(new Blob([work.value],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download=lessonConfig.download||'K0877-01-mijn-kookopdracht.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}}
+const work=document.getElementById('work');if(work){work.value=lessonConfig.template||template;document.getElementById('template').onclick=()=>{if(work.value===template||confirm('Je huidige tekst vervangen door het lege sjabloon?'))work.value=lessonConfig.template||template};document.getElementById('download').onclick=()=>{const fileHref=document.getElementById('download').dataset.workbladHref;if(fileHref){const link=document.createElement('a');link.href=fileHref;link.download='K0877-01-werkblad.txt';link.click();return;}const url=URL.createObjectURL(new Blob([work.value],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download=lessonConfig.download||'K0877-01-werkblad.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}}
 
 function fitFrame(){const frame=document.querySelector('.frame');if(!frame)return;const scale=Math.min((innerWidth-20)/1440,(innerHeight-20)/850,1);frame.style.transform='translate(-50%,-50%) scale('+Math.max(.1,scale)+')'};addEventListener('resize',fitFrame);fitFrame();
 
