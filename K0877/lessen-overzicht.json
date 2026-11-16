@@ -1,0 +1,142 @@
+[
+  {
+    "n": 1,
+    "file": "01-maaltijd-koken.html",
+    "title": "Een maaltijd koken",
+    "sbu": 10,
+    "home": false
+  },
+  {
+    "n": 2,
+    "file": "02-kleding-repareren.html",
+    "title": "Kleding repareren",
+    "sbu": 10,
+    "home": false
+  },
+  {
+    "n": 3,
+    "file": "03-muur-schilderen.html",
+    "title": "Een muur schilderen",
+    "sbu": 10,
+    "home": false
+  },
+  {
+    "n": 4,
+    "file": "04-was-verzorgen.html",
+    "title": "Wassen en verzorgen",
+    "sbu": 10,
+    "home": false
+  },
+  {
+    "n": 5,
+    "file": "05-schoonmaken.html",
+    "title": "Schoonmaken en hygiëne",
+    "sbu": 10,
+    "home": false
+  },
+  {
+    "n": 6,
+    "file": "06-fietsband-plakken.html",
+    "title": "Een fietsband plakken",
+    "sbu": 10,
+    "home": false
+  },
+  {
+    "n": 7,
+    "file": "07-bouwpakket.html",
+    "title": "Een bouwpakket monteren",
+    "sbu": 10,
+    "home": false
+  },
+  {
+    "n": 8,
+    "file": "08-ophangen.html",
+    "title": "Meten en ophangen",
+    "sbu": 10,
+    "home": false
+  },
+  {
+    "n": 9,
+    "file": "09-sifon.html",
+    "title": "Een sifon reinigen",
+    "sbu": 10,
+    "home": false
+  },
+  {
+    "n": 10,
+    "file": "10-elektriciteit.html",
+    "title": "Veilig met elektriciteit",
+    "sbu": 10,
+    "home": false
+  },
+  {
+    "n": 11,
+    "file": "11-wifi.html",
+    "title": "Internet en wifi instellen",
+    "sbu": 10,
+    "home": false
+  },
+  {
+    "n": 12,
+    "file": "12-budget.html",
+    "title": "Een huishoudbudget maken",
+    "sbu": 10,
+    "home": false
+  },
+  {
+    "n": 13,
+    "file": "13-administratie.html",
+    "title": "Post en rekeningen",
+    "sbu": 10,
+    "home": false
+  },
+  {
+    "n": 14,
+    "file": "14-ondersteunen.html",
+    "title": "Iemand ondersteunen",
+    "sbu": 10,
+    "home": false
+  },
+  {
+    "n": 15,
+    "file": "15-ehbo.html",
+    "title": "EHBO en noodsituaties",
+    "sbu": 10,
+    "home": false
+  },
+  {
+    "n": 16,
+    "file": "16-week-maaltijden.html",
+    "title": "Een week maaltijden",
+    "sbu": 18,
+    "home": true
+  },
+  {
+    "n": 17,
+    "file": "17-week-huishouden.html",
+    "title": "Een week huishouden",
+    "sbu": 18,
+    "home": true
+  },
+  {
+    "n": 18,
+    "file": "18-hulpklus.html",
+    "title": "Een hulpklus uitvoeren",
+    "sbu": 18,
+    "home": true
+  },
+  {
+    "n": 19,
+    "file": "19-eerste-woning.html",
+    "title": "Mijn eerste woning",
+    "sbu": 18,
+    "home": true
+  },
+  {
+    "n": 20,
+    "file": "20-huishouden-organiseren.html",
+    "title": "Mijn huishouden regelen",
+    "sbu": 18,
+    "home": true
+  }
+]
