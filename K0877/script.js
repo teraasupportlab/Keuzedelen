@@ -40,4 +40,3 @@ const work=document.getElementById('work');if(work){work.value=template;document
 
 function fitFrame(){const frame=document.querySelector('.frame');if(!frame)return;const scale=Math.min((innerWidth-20)/1440,(innerHeight-20)/850,1);frame.style.transform='translate(-50%,-50%) scale('+Math.max(.1,scale)+')'};addEventListener('resize',fitFrame);fitFrame();
 
-const kilroy=document.querySelector('.kaarel-kilroy');if(kilroy&&!matchMedia('(prefers-reduced-motion: reduce)').matches){setTimeout(()=>{const image=kilroy.querySelector('img');image.onload=()=>{kilroy.classList.add('visible');setTimeout(()=>{kilroy.classList.remove('visible');image.removeAttribute('src')},5500)};image.src=image.dataset.kilroySrc},4000+Math.random()*5000)}

@@ -14,3 +14,10 @@ html,body{width:100%;height:100%;overflow:hidden}body{background:#142f24}.frame{
 
 /* kAArel verschijnt eenmaal rechtsboven op het opdrachtenmenu */
 .kaarel-kilroy{position:absolute;right:36px;top:-5px;width:205px;height:127px;overflow:hidden;pointer-events:none;z-index:4;visibility:hidden}.kaarel-kilroy img{width:205px;height:auto;display:block}.kaarel-kilroy.visible{visibility:visible}@media(prefers-reduced-motion:reduce){.kaarel-kilroy{display:none}}@media print{.kaarel-kilroy{display:none}}
+
+/* Direct zichtbare Kilroy: GIF regelt zelf het opkomen en herhalen */
+.kaarel-kilroy{visibility:visible;top:1px;right:32px;width:220px;height:125px}.kaarel-kilroy img{width:220px}@media(prefers-reduced-motion:reduce){.kaarel-kilroy{display:block}}
+
+/* Handjes eerst op de bovenrand, daarna het hoofd */
+.kaarel-kilroy{visibility:visible;top:-30px;right:32px;width:235px;height:161px}.kaarel-kilroy img{width:235px;height:auto}
+.kaarel-kilroy{top:-15px}
