@@ -40,3 +40,5 @@ const work=document.getElementById('work');if(work){work.value=template;document
 
 function fitFrame(){const frame=document.querySelector('.frame');if(!frame)return;const scale=Math.min((innerWidth-20)/1440,(innerHeight-20)/850,1);frame.style.transform='translate(-50%,-50%) scale('+Math.max(.1,scale)+')'};addEventListener('resize',fitFrame);fitFrame();
 
+
+const replayKilroy=document.querySelector('.kaarel-kilroy img');if(replayKilroy){replayKilroy.addEventListener('click',()=>{const src=replayKilroy.getAttribute('src').split('?')[0];replayKilroy.src=src+'?play='+Date.now()})}
