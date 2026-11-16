@@ -1,31 +1,39 @@
-const opdrachten=[
-['Een maaltijd koken','Koken','Kies een recept, bereken de kosten, bereid een eenvoudige maaltijd en ruim de keuken op.'],
-['Kleding repareren','Kleding','Naai een knoop aan, herstel een losse naad en repareer een klein gaatje.'],
-['Een muur schilderen','Klussen','Vul gaatjes, schuur, plak af en schilder een oefenpaneel netjes.'],
-['Wassen en kleding verzorgen','Huishouden','Lees waslabels, sorteer de was en oefen met wassen, drogen, vouwen en strijken.'],
-['Schoonmaken en hygiëne','Zorg en welzijn','Reinig keuken en sanitair en oefen met handhygiëne en het voorkomen van besmetting.'],
-['Een fietsband plakken','Techniek','Haal de binnenband uit de buitenband, zoek en plak het lek en controleer de band na montage.'],
-['Een bouwpakket monteren','Klussen','Controleer de onderdelen en zet met de handleiding een kastje, tafeltje of rek in elkaar.'],
-['Meten, boren en ophangen','Klussen','Kies passende bevestigingsmiddelen en monteer een plankje of kapstok op een oefenwand.'],
-['Een sifon reinigen','Techniek','Demonteer en reinig een sifon op een oefenopstelling, monteer deze en controleer op lekkage.'],
-['Veilig met elektriciteit','Techniek','Beoordeel snoeren en stekkerdozen, vergelijk vermogens en onderzoek een veilige oefenopstelling.'],
-['Internet en wifi instellen','ICT','Sluit een router aan, wijzig de netwerknaam en het wachtwoord en los een verbindingsprobleem op.'],
-['Een huishoudbudget maken','Geld en administratie','Verdeel een fictief inkomen over vaste lasten, boodschappen en reserves. Verwerk ook een onverwachte uitgave.'],
-['Post en rekeningen verwerken','Geld en administratie','Sorteer voorbeeldpost, herken betaaltermijnen en richt een digitale administratie in.'],
-['Iemand ondersteunen','Zorg en welzijn','Oefen met hulp bij boodschappen, wandelen of koken. Bespreek wat iemand zelf wil en kan.'],
-['EHBO en noodsituaties','Zorg en welzijn','Oefen onder begeleiding met een noodmelding, eenvoudige eerste hulp en praktijkscenario’s.'],
-['Een week maaltijden regelen','Koken','Maak een weekmenu met budget, doe boodschappen en bereid op drie dagen een maaltijd.'],
-['Een week het huishouden doen','Huishouden','Plan en voer afgesproken was- en schoonmaaktaken uit en controleer het resultaat.'],
-['Een hulpklus voor een ander','Zorg en welzijn','Bespreek de hulpvraag, plan een huishoudelijke of technische klus, voer deze uit en vraag feedback.'],
-['Mijn eerste woning','Geld en administratie','Zoek een huuradvertentie, maak een inrichtingsplan en bereken eenmalige en maandelijkse kosten.'],
-['Mijn huishouden organiseren','Organisatie','Maak een systeem voor administratie, taken, onderhoud en belangrijke contacten. Test en verbeter dit gedurende twee weken.']
-].map(([titel,gebied,tekst],i)=>({nr:i+1,titel,gebied,tekst,thuis:i>=15,sbu:i>=15?18:10}));
-const main=document.querySelector('main');
-const evidence={16:'Weekmenu, boodschappenlijst, kostenoverzicht en foto’s van drie maaltijden.',17:'Een weekplanning, enkele foto’s van uitgevoerde taken en een korte terugblik.',18:'Hulpvraag, materialen en kosten, voor- en nafoto’s en feedback van de ander.',19:'Huuradvertentie met bron, inrichtingsplan en begroting van eenmalige en maandelijkse kosten.',20:'Een ingevulde planning, mappenstructuur met fictieve gegevens en verbeterpunten na twee weken.'};
-function start(){main.innerHTML=`<section class="hero"><div class="intro"><p class="eyebrow">Keuzedeel · samen aan de slag</p><h1>Je eigen plek.<br>Je eigen leven.<br><em>Dat kun jij.</em></h1><p>Een band plakken, een maaltijd koken of iemand helpen. Ontdek met KAArel wat jij kunt en leer handig voor jezelf én anderen te zorgen.</p><div class="actions"><a class="button" href="#opdrachten">Ontdek de opdrachten <span>↗</span></a><a class="button secondary" href="#werkwijze">Zo werkt het</a></div><div class="stats"><div><b>20</b><span>praktische opdrachten</span></div><div><b>15 + 5</b><span>op school + thuis</span></div><div><b>240</b><span>studiebelastingsuren</span></div></div><div class="domains"><span>Techniek & klussen</span><span>Koken & huishouden</span><span>Zorg & welzijn</span><span>Geld & organisatie</span></div></div><div class="mascot"><img src="assets/kaarel.png" alt="KAArel, een vrolijk huisje in een groen werkvest"><div class="hello"><b>Hé, ik ben KAArel!</b>Ik help je op weg. Jij doet het zelf.</div></div></section>`}
-function overview(filter='alle'){main.innerHTML=`<section class="pagehead"><div><p class="eyebrow">Kiezen · doen · leren</p><h1>Wat ga jij aanpakken?</h1><p>Open een opdracht en ontdek wat je gaat doen.</p></div><label><span class="note">Toon: </span><select aria-label="Filter opdrachten"><option value="alle">Alle opdrachten</option><option value="school">Op school</option><option value="thuis">Volledig thuis</option><option value="zorg">Zorg en welzijn</option></select></label></section><section class="cards" aria-label="Opdrachten"></section><div class="bar"><span id="count"></span><span>15 × 10 SBU + 5 × 18 SBU = 240 SBU</span></div>`;const select=main.querySelector('select');select.value=filter;select.addEventListener('change',()=>cards(select.value));cards(filter)}
-function cards(f){const list=opdrachten.filter(o=>f==='alle'||f==='school'&&!o.thuis||f==='thuis'&&o.thuis||f==='zorg'&&o.gebied==='Zorg en welzijn');main.querySelector('.cards').innerHTML=list.map(o=>`<button class="card ${o.thuis?'home':''}" data-id="${o.nr}"><span class="number">${String(o.nr).padStart(2,'0')}</span><div><h2>${o.titel}</h2><span class="meta">${o.thuis?'Thuis':'School'} · ${o.sbu} SBU</span></div></button>`).join('');main.querySelector('#count').textContent=`${list.length} opdrachten · klik om te bekijken`;main.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>location.hash='opdracht-'+b.dataset.id)}
-function detail(n){const o=opdrachten[n-1];if(!o){location.hash='opdrachten';return}main.innerHTML=`<button class="back" onclick="location.hash='opdrachten'">← Alle opdrachten</button><section class="detail"><aside class="aside"><img src="assets/kaarel.png" alt="KAArel"><p><strong>De tip van KAArel</strong><br>Bereid je voor, neem de tijd en controleer je resultaat.</p></aside><article><p class="eyebrow">Opdracht ${String(o.nr).padStart(2,'0')} · ${o.gebied}</p><h1>${o.titel}</h1><div class="tags"><span>${o.thuis?'Volledig thuis':'Op school'}</span><span>${o.sbu} SBU</span><span>${o.thuis?'Zelfstandig toepassen':'4 uur praktijkles'}</span></div><p class="detailcopy">${o.tekst}</p><div class="panels"><section class="panel"><h2>Dit ga je doen</h2><ul><li>Bespreek de opdracht en bepaal wat je nodig hebt.</li><li>Maak een kort plan en voer de opdracht uit.</li><li>Controleer het resultaat en verbeter waar nodig.</li></ul></section><section class="panel"><h2>Dit laat je zien</h2><p>${evidence[n]||'Een kort stappenplan, enkele foto’s of een demonstratie van je resultaat en een korte terugblik op wat je hebt geleerd.'}</p></section></div><p class="note">${o.thuis?'18 SBU voor voorbereiding, uitvoering, controleren en bewijs verzamelen. Bespreek een alternatief met je docent als uitvoeren thuis niet mogelijk is.':'10 SBU: 4 uur praktijkles en 6 uur voorbereiding, zelfstandig oefenen en verwerking.'}</p><p class="note">Eerste opzet · de volledige werkinstructie en beoordeling volgen bij de uitwerking van deze opdracht.</p><a class="button secondary" href="#${n===20?'opdrachten':'opdracht-'+(n+1)}">${n===20?'Terug naar het overzicht':'Volgende opdracht →'}</a></article></section>`}
-function method(){main.innerHTML=`<section class="pagehead"><div><p class="eyebrow">Van proberen naar zelf doen</p><h1>Zo werkt het.</h1><p>Je leert door te doen. KAArel wijst je de weg.</p></div></section><div class="steps"><section class="panel"><b>01</b><h2>Bereid je voor</h2><p>Lees de opdracht, bekijk de uitleg en maak een kort plan. Verzamel materialen en bespreek vragen met je docent.</p></section><section class="panel"><b>02</b><h2>Steek je handen uit</h2><p>Voer de opdracht uit, oefen en controleer je werk. Vijftien opdrachten doe je op school; vijf doe je volledig thuis.</p></section><section class="panel"><b>03</b><h2>Laat zien wat je kunt</h2><p>Bewaar je stappenplan, enkele foto’s of een demonstratie en een korte terugblik. Je docent vertelt waar je deze inlevert.</p></section></div><div class="wide"><p><strong>Je hoeft het nog niet allemaal te kunnen.</strong> Je komt hier om het te leren. Vraag hulp als je vastloopt. Is een thuisopdracht niet mogelijk? Spreek met je docent een gelijkwaardig alternatief af.</p></div><p class="note">Studielast: 15 schoolopdrachten van 10 SBU en 5 thuisopdrachten van 18 SBU. Samen 240 SBU. De precieze planning en beoordeling worden nog uitgewerkt.</p><div class="actions"><a class="button" href="#opdrachten">Naar de opdrachten ↗</a></div>`}
-function render(){const hash=location.hash.slice(1)||'start';document.querySelectorAll('nav a').forEach(a=>{const active=a.hash==='#'+(hash.startsWith('opdracht-')?'opdrachten':hash);a.classList.toggle('active',active);if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});if(hash==='opdrachten')overview();else if(hash==='werkwijze')method();else if(hash.startsWith('opdracht-'))detail(Number(hash.slice(9)));else start();window.scrollTo(0,0)}
-window.addEventListener('hashchange',render);render();
+const tabs=[...document.querySelectorAll('[data-tab]')];let current=0;
+const tips=['Koken kun jij leren.', 'Een goed plan maakt koken makkelijker.', 'Leg alles klaar voordat je begint.', 'Begin eenvoudig en werk stap voor stap.', 'Rustig werken is ook goed werken.', 'Je bent pas klaar als de keuken weer netjes is.', 'Laat zien wat jij hebt gedaan.', 'Schrijf kort op wat je gaat doen en hebt geleerd.'];
+function show(n,focus=false){current=Math.max(0,Math.min(tabs.length-1,n));tabs.forEach((b,i)=>{b.setAttribute('aria-selected',i===current);b.tabIndex=i===current?0:-1;document.getElementById('pane'+i).hidden=i!==current});document.getElementById('tip').textContent=tips[current];document.getElementById('step').textContent=(current+1)+' / '+tabs.length;document.getElementById('prev').hidden=current===0;document.getElementById('next').hidden=current===tabs.length-1;if(focus)tabs[current].focus()}
+tabs.forEach((b,i)=>{b.addEventListener('click',()=>show(i));b.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();show(e.key==='Home'?0:e.key==='End'?tabs.length-1:i+(e.key==='ArrowRight'?1:-1),true)}})});
+if(tabs.length){document.getElementById('prev').onclick=()=>show(current-1,true);document.getElementById('next').onclick=()=>show(current+1,true);show(0)}
+document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-filter]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',x===b)});document.querySelectorAll('[data-place]').forEach(c=>c.hidden=b.dataset.filter!=='alle'&&b.dataset.filter!==c.dataset.place)});
+const template=`KOOKOPDRACHT 01 - K0877
+Naam:
+Datum:
+
+MIJN PLAN
+Recept en bron:
+Aantal personen: 2
+Dieetwensen en afspraken:
+Materialen:
+
+BOODSCHAPPEN EN KOSTEN
+Ingrediënt | Hoeveelheid | Verpakkingsprijs | Kosten gebruikte hoeveelheid
+
+Totaal gebruikte ingrediënten:
+Kosten per persoon (totaal / 2):
+Werkelijke aanschafkosten:
+
+WERKPLANNING
+Stap | Begintijd | Benodigde tijd
+
+ZELFSTANDIG OEFENEN
+Wat heb ik geoefend of herhaald?
+Wat ging daarna beter?
+Werkelijk bestede tijd per activiteit:
+
+RESULTAAT
+Mijn drie bewijsfoto's staan bij:
+Feedback van:
+Dit ging goed:
+Dit doe ik volgende keer anders:
+Dit kan ik nu zelfstandig:
+`;
+const work=document.getElementById('work');if(work){work.value=template;document.getElementById('template').onclick=()=>{if(work.value===template||confirm('Je huidige tekst vervangen door het lege sjabloon?'))work.value=template};document.getElementById('download').onclick=()=>{const url=URL.createObjectURL(new Blob([work.value],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='K0877-01-mijn-kookopdracht.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}}
