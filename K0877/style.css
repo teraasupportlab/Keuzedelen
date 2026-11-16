@@ -29,3 +29,5 @@ html,body{width:100%;height:100%;overflow:hidden}body{background:#142f24}.frame{
 .kaarel-kilroy{top:-23px;right:30px;width:250px;height:184px}.kaarel-kilroy img{width:250px;height:auto}
 
 .kaarel-kilroy{pointer-events:auto;cursor:pointer}
+
+.kaarel-kilroy{pointer-events:none;cursor:default}
