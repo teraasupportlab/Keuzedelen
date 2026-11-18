@@ -38,10 +38,34 @@ body{position:relative;background:radial-gradient(circle at 8% 12%,#fff8d6 0,tra
 .total{margin-top:auto;background:linear-gradient(100deg,#49e66b,#b7f56b)}
 /* AArno kijkt afwisselend links, vooruit en rechts mee. */
 .owl{transform-origin:50% 72%;animation:owlScan 6s ease-in-out infinite}
-@keyframes owlScan{0%,17%,100%{transform:translateX(0) rotate(0)}25%,37%{transform:translateX(-5px) rotate(-4deg)}45%,63%{transform:translateX(0) rotate(0)}72%,84%{transform:translateX(5px) rotate(4deg)}92%{transform:translateX(0) rotate(0)}}
+@keyframes owlScan{0%,17%,100%{transform:translateX(0) rotate(0)}25%,37%{transform:translateX(-10px) rotate(-6deg)}45%,63%{transform:translateX(0) rotate(0)}72%,84%{transform:translateX(10px) rotate(6deg)}92%{transform:translateX(0) rotate(0)}}
 @media(prefers-reduced-motion:reduce){.owl{animation:none}}
+
+/* Leesbaarheid: vergroot tekst in menu, kaarten en begeleidingspaneel. */
+.topnav a{font-size:14px;padding:10px 14px}
+.brandline{font-size:15px}
+.guide .kicker,.menuhead .kicker{font-size:13px}
+.guide h1{font-size:30px;line-height:1.04}
+.guide p{font-size:15px;line-height:1.45}
+.guide .call{font-size:14px;line-height:1.45;padding:12px}
+.menuhead h2{font-size:30px}
+.menuhead p{font-size:15px;line-height:1.35}
+.links a{font-size:13px;padding:9px 12px}
+.task{padding:9px 11px}
+.tasknum{width:32px;height:32px;font-size:14px}
+.task h3{font-size:18px;line-height:1.12;margin-bottom:4px}
+.task p{font-size:15px;line-height:1.22;-webkit-line-clamp:2}
+.taskfoot{padding-top:5px}
+.taskfoot span{font-size:14px}
+.taskfoot b{font-size:13px}
+.arrow{font-size:18px}
+.pathline{font-size:13px;padding:10px 12px}
+.total{font-size:14px;padding:0 16px}
+.total strong{font-size:20px}
+.footer{font-size:12px}
+@media(max-width:700px){.task h3{font-size:17px}.task p{font-size:14px}.taskfoot span{font-size:13px}}
 </style></head><body><div class="layout"><header class="top"><img class="logo" src="assets/ter-aa-logo.png" alt="Ter AA"><div class="brandline">K0516 · Verdieping blijvend fit,<br>veilig en gezond werken</div><nav class="topnav"><a class="active" href="index.html">Startmenu</a><a href="sbu.html">SBU-verantwoording</a><a href="les-01.html">Complete les 01</a></nav></header>
-<main class="shell"><aside class="guide"><img class="owl" src="assets/arbo-uil.png" alt="AArno, de Arbo-uil"><div class="kicker">Welkom bij Arbo</div><h1>Zie het.<br>Bespreek het.<br>Doe het veilig.</h1><p>Leer risico’s herkennen en volg instructies om jezelf en anderen te beschermen.</p><div class="call"><strong>Jouw leerroute</strong><br>12 opdrachten · 240 SBU<br>Individueel portfolio · situaties uit werk, stage en school</div></aside><section class="menu"><div class="menuhead"><div><div class="kicker">Keuzedeel · niveau 2</div><h2>Opdrachtenmenu</h2><p>Kies een opdracht om te bekijken. Les 01 is volledig uitgewerkt.</p></div><div class="links"><a href="sbu.html">SBU-verantwoording ↗</a><a href="les-01.html">Start les 01 ↗</a></div></div><div class="tasks">
+<main class="shell"><aside class="guide"><img class="owl" src="assets/arbo-uil.png" alt="Killroy, de Arbo-uil"><div class="kicker">KILLROY · JOUW ARBO-Uil</div><h1>Killroy kijkt<br>met je mee.</h1><p>Hij kijkt links, recht vooruit en rechts. Samen herken je risico’s en werk je veilig.</p><div class="call"><strong>Jouw leerroute</strong><br>12 opdrachten · 240 SBU<br>Individueel portfolio · situaties uit werk, stage en school</div></aside><section class="menu"><div class="menuhead"><div><div class="kicker">Keuzedeel · niveau 2</div><h2>Opdrachtenmenu</h2><p>Kies een opdracht om te bekijken. Les 01 is volledig uitgewerkt.</p></div><div class="links"><a href="sbu.html">SBU-verantwoording ↗</a><a href="les-01.html">Start les 01 ↗</a></div></div><div class="tasks">
 <button class="task first" type="button" data-num="01" data-title="AArno’s Arbo-scan" data-sbu="8 SBU" data-desc="Kies een werkplek en herken twee soorten risico’s. Beschrijf gevolgen, een veilige actie, bij wie je meldt en één gezonde gewoonte." data-link="les-01.html"><span class="tasknum">01</span><span class="taskbody"><h3>AArno’s Arbo-scan</h3><p>Kies een plek en herken twee soorten risico’s.</p></span><span class="taskfoot"><span>8 SBU</span><b>COMPLETE LES</b><span class="arrow">↗</span></span></button>
 <button class="task" type="button" data-num="02" data-title="Risico’s herkennen" data-sbu="14 SBU" data-desc="Oefen met fysieke en psychosociale risico’s. Benoem wat je ziet, wat er kan gebeuren en welke signalen je serieus moet nemen."><span class="tasknum">02</span><span class="taskbody"><h3>Risico’s herkennen</h3><p>Fysieke en psychosociale risico’s onderscheiden.</p></span><span class="taskfoot"><span>14 SBU</span><span class="arrow">↗</span></span></button>
 <button class="task" type="button" data-num="03" data-title="Lichaam en belasting" data-sbu="20 SBU" data-desc="Herken tillen, duwen, trekken, herhalen en lang stilzitten. Koppel de belasting aan mogelijke klachten en veilige werkafspraken."><span class="tasknum">03</span><span class="taskbody"><h3>Lichaam en belasting</h3><p>Tillen, herhalen, duwen en lang stilzitten.</p></span><span class="taskfoot"><span>20 SBU</span><span class="arrow">↗</span></span></button>
