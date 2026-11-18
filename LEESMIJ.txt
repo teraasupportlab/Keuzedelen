@@ -1,0 +1,17 @@
+K0516 — AArno’s Arbo-keuzedeel
+
+Starten
+1. Pak de volledige map uit.
+2. Open index.html in een browser.
+3. Vanuit het startmenu open je de SBU-verantwoording of de complete les 01.
+
+Inhoud
+- index.html: startmenu met 12 opdrachten en de voorgestelde SBU-verdeling.
+- sbu.html: onderbouwing van de totale studielast.
+- les-01.html: complete lesuitwerking van AArno’s Arbo-scan (8 SBU).
+- assets/: Ter AA-logo en AArno-afbeelding.
+
+De officiële studielast van K0516 is 240 SBU. De verdeling over opdrachten en onderdelen is een onderwijsvoorstel; SBB schrijft de verdeling per les niet voor.
+
+Weergave
+De pagina’s schalen automatisch naar het browservenster. Het donkerblauwe kader staat op een contrasterende lichtgrijze buitenachtergrond en veroorzaakt geen pagina-scrollbalken.
