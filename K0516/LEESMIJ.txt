@@ -9,7 +9,7 @@ Inhoud
 - index.html: startmenu met 12 opdrachten en de voorgestelde SBU-verdeling.
 - sbu.html: onderbouwing van de totale studielast.
 - les-01.html: complete lesuitwerking van AArno’s Arbo-scan (8 SBU).
-- assets/: Ter AA-logo en AArno-afbeelding.
+- assets/: logo, stilstaande AArno-uil en de aparte aArno-peek-animatie.gif voor het startmenu.
 
 De officiële studielast van K0516 is 240 SBU. De verdeling over opdrachten en onderdelen is een onderwijsvoorstel; SBB schrijft de verdeling per les niet voor.
 

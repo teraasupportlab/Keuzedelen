@@ -60,47 +60,16 @@ body{position:relative;background:radial-gradient(circle at 8% 12%,#fff8d6 0,tra
 .footer{font-size:12px}
 @media(max-width:700px){.task h3{font-size:17px}.task p{font-size:14px}.taskfoot span{font-size:13px}}
 
-/* Stille Arbo-uil in het paneel en Killroy die bij de navigatielijn omhoog piept. */
+/* Stille AArno onder het logo; de losse GIF laat hem achter de navigatielijn piepen. */
 .owl-static{width:150px;height:150px;object-fit:contain;display:block;margin:-2px auto 0;filter:drop-shadow(0 9px 9px #15243a42)}
 .peek-stage{position:relative;z-index:3;flex:none;width:92px;height:104px;align-self:flex-end;margin:0 0 -16px auto;overflow:hidden;pointer-events:none}
-.peek-wing{position:absolute;left:0;bottom:-28px;width:92px;height:100px;object-fit:contain;opacity:0;filter:drop-shadow(0 5px 5px #07182e55)}
-.peek-wing-left{clip-path:polygon(0 34%,25% 40%,42% 49%,48% 60%,43% 70%,25% 66%,0 72%);animation:peekWings 8s ease-in-out infinite}
-.peek-wing-right{clip-path:polygon(100% 34%,75% 40%,58% 49%,52% 60%,57% 70%,75% 66%,100% 72%);animation:peekWings 8s ease-in-out infinite}
-.peek-owl{position:absolute;left:0;bottom:-18px;width:92px;height:100px;opacity:0;transform:translateY(92px);animation:peekRise 8s ease-in-out infinite}
-.peek-owl>img{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 5px 5px #07182e55)}
-.peek-eyes{position:absolute;inset:0;opacity:0;animation:peekEyesShow 8s linear infinite}
-.peek-eye{position:absolute;top:24px;width:10px;height:11px;border-radius:50%;font-style:normal}
-.peek-eye-left{left:31px}.peek-eye-right{left:48px}
-.peek-eye:before{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(ellipse,#8a3b0d 0 43%,#bd6a15 56%,#efa92c 72%,#f7cb58 85%,#b66a16 100%);box-shadow:0 0 0 1px #6c350e}
-.peek-eye:after{content:"";position:absolute;left:2px;top:2px;width:6px;height:7px;border-radius:50%;background:radial-gradient(circle at 35% 28%,#fff 0 16%,#24130a 23%,#090706 90%);animation:peekLook 8s linear infinite}
+.peek-gif{position:absolute;left:0;bottom:0;width:92px;height:71px;display:block;object-fit:fill;filter:drop-shadow(0 4px 4px #07182e55)}
 .topnav{margin-left:0;gap:8px;position:relative;z-index:4}
-@keyframes peekWings{
-  0%,9%{opacity:0;transform:translateY(18px)}
-  19%,37%{opacity:1;transform:translateY(0)}
-  47%,100%{opacity:0;transform:translateY(13px)}
-}
-@keyframes peekRise{
-  0%,29%{opacity:0;transform:translateY(92px)}
-  39%{opacity:1;transform:translateY(48px)}
-  50%,66%{opacity:1;transform:translateY(0)}
-  77%{opacity:1;transform:translateY(44px)}
-  86%,100%{opacity:0;transform:translateY(92px)}
-}
-@keyframes peekEyesShow{0%,48%{opacity:0}52%,72%{opacity:1}78%,100%{opacity:0}}
-@keyframes peekLook{
-  0%,50%,100%{transform:translateX(0)}
-  55%,59%{transform:translateX(-2px)}
-  64%,67%{transform:translateX(0)}
-  70%,74%{transform:translateX(2px)}
-  78%{transform:translateX(0)}
-}
-@media(max-width:950px){.peek-stage{width:72px}.peek-wing,.peek-owl{width:72px}.peek-eye-left{left:24px}.peek-eye-right{left:38px}}
+@media(max-width:950px){.peek-stage{width:72px}.peek-gif{width:72px;height:56px}}
 
 
-</style></head><body><div class="layout"><header class="top"><img class="logo" src="assets/ter-aa-logo.png" alt="Ter AA"><div class="brandline">K0516 · Verdieping blijvend fit,<br>veilig en gezond werken</div><div class="peek-stage" aria-label="Killroy de uil piept omhoog en kijkt rond">
-<img class="peek-wing peek-wing-left" src="assets/killroy-uil.png" alt="" aria-hidden="true">
-<img class="peek-wing peek-wing-right" src="assets/killroy-uil.png" alt="" aria-hidden="true">
-<div class="peek-owl"><img src="assets/killroy-uil.png" alt="" aria-hidden="true"><span class="peek-eyes"><i class="peek-eye peek-eye-left"></i><i class="peek-eye peek-eye-right"></i></span></div>
+</style></head><body><div class="layout"><header class="top"><img class="logo" src="assets/ter-aa-logo.png" alt="Ter AA"><div class="brandline">K0516 · Verdieping blijvend fit,<br>veilig en gezond werken</div><div class="peek-stage" aria-label="AArno piept met zijn vleugeltopjes en kop boven de lijn en kijkt rond">
+<img class="peek-gif" src="assets/aArno-peek-animatie.gif" alt="" aria-hidden="true">
 </div><nav class="topnav"><a class="active" href="index.html">Startmenu</a><a href="sbu.html">SBU-verantwoording</a><a href="les-01.html">Complete les 01</a></nav></header>
 <main class="shell"><aside class="guide"><img class="owl-static" src="assets/arbo-uil.png" alt="AArno, de Arbo-uil"><div class="kicker">Welkom bij Arbo</div><h1>Zie het.<br>Bespreek het.<br>Doe het veilig.</h1><p>Leer risico’s herkennen en volg instructies om jezelf en anderen te beschermen.</p><div class="call"><strong>Jouw leerroute</strong><br>12 opdrachten · 240 SBU<br>Individueel portfolio · situaties uit werk, stage en school</div></aside><section class="menu"><div class="menuhead"><div><div class="kicker">Keuzedeel · niveau 2</div><h2>Opdrachtenmenu</h2><p>Kies een opdracht om te bekijken. Les 01 is volledig uitgewerkt.</p></div><div class="links"><a href="sbu.html">SBU-verantwoording ↗</a><a href="les-01.html">Start les 01 ↗</a></div></div><div class="tasks">
 <button class="task first" type="button" data-num="01" data-title="AArno’s Arbo-scan" data-sbu="8 SBU" data-desc="Kies een werkplek en herken twee soorten risico’s. Beschrijf gevolgen, een veilige actie, bij wie je meldt en één gezonde gewoonte." data-link="les-01.html"><span class="tasknum">01</span><span class="taskbody"><h3>AArno’s Arbo-scan</h3><p>Kies een plek en herken twee soorten risico’s.</p></span><span class="taskfoot"><span>8 SBU</span><b>COMPLETE LES</b><span class="arrow">↗</span></span></button>
