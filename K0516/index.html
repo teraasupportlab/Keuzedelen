@@ -20,6 +20,26 @@ body{position:relative;background:radial-gradient(circle at 8% 12%,#fff8d6 0,tra
 .footer{position:absolute;bottom:0;left:0;right:0;height:28px;padding:0 25px;display:flex;align-items:center;justify-content:space-between;color:#cad7e8;font-size:10px;z-index:1}
 .dialogback{position:fixed;inset:0;z-index:10;background:#06152ad9;backdrop-filter:blur(9px);display:none;place-items:center;padding:20px}.dialogback.show{display:grid}.dialog{width:min(600px,92vw);border:1px solid #f2ed2280;border-radius:19px;background:linear-gradient(145deg,#fffdf6,#f2efdF);color:var(--ink);padding:22px;box-shadow:0 24px 80px #0008;position:relative}.dialog h2{font-size:24px;margin:0 35px 8px 0}.dialog p{font-size:14px;line-height:1.5}.dialog .meta{display:inline-block;background:var(--signal);padding:7px 10px;border-radius:99px;font-size:11px;font-weight:900}.close{position:absolute;right:14px;top:12px;border:0;border-radius:50%;width:32px;height:32px;background:var(--navy2);color:white;font-size:18px}.dialog a{display:inline-block;margin-top:10px;padding:10px 13px;border-radius:9px;background:var(--navy2);color:white;text-decoration:none;font-size:12px;font-weight:800}
 @media(max-width:900px){.top{padding:16px 28px}.shell{grid-template-columns:250px minmax(0,1fr)}}
+
+/* Opdrachttegels: compacter, grotere tekst en duidelijk contrast met het navy vlak. */
+.tasks{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr));height:456px;flex:none;gap:8px}
+.task{height:108px;min-height:0;padding:8px 10px;grid-template-columns:30px minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto;column-gap:8px;row-gap:4px;background:linear-gradient(145deg,#fffdf5,#eaf0f6);border:1px solid #d2deea;border-left:4px solid #f2ed22;color:#102847;box-shadow:0 5px 13px #0003}
+.task:hover,.task:focus-visible{background:linear-gradient(145deg,#ffffff,#f4f8fc)}
+.task.first{background:linear-gradient(145deg,#f4ffe9,#e6f7e4);border-color:#49e66b;border-left:5px solid #49e66b}
+.tasknum{grid-column:1;grid-row:1;align-self:start;width:29px;height:29px;font-size:12px}
+.taskbody{grid-column:2;grid-row:1;align-self:center;min-width:0}
+.task h3{font-size:16px;line-height:1.08;color:#102847}
+.task p{font-size:13px;line-height:1.2;color:#384f69;-webkit-line-clamp:1}
+.taskfoot{grid-column:1/-1;grid-row:2;border-top:1px solid #cbd6e1;padding-top:4px}
+.taskfoot span{font-size:12px;color:#173d67}
+.taskfoot b{font-size:11px;color:#16753a}
+.arrow{color:#188a3f;font-size:16px}
+.pathline{background:#ffffff18;font-size:11px;padding:9px 11px}
+.total{margin-top:auto;background:linear-gradient(100deg,#49e66b,#b7f56b)}
+/* AArno kijkt afwisselend links, vooruit en rechts mee. */
+.owl{transform-origin:50% 72%;animation:owlScan 6s ease-in-out infinite}
+@keyframes owlScan{0%,17%,100%{transform:translateX(0) rotate(0)}25%,37%{transform:translateX(-5px) rotate(-4deg)}45%,63%{transform:translateX(0) rotate(0)}72%,84%{transform:translateX(5px) rotate(4deg)}92%{transform:translateX(0) rotate(0)}}
+@media(prefers-reduced-motion:reduce){.owl{animation:none}}
 </style></head><body><div class="layout"><header class="top"><img class="logo" src="assets/ter-aa-logo.png" alt="Ter AA"><div class="brandline">K0516 · Verdieping blijvend fit,<br>veilig en gezond werken</div><nav class="topnav"><a class="active" href="index.html">Startmenu</a><a href="sbu.html">SBU-verantwoording</a><a href="les-01.html">Complete les 01</a></nav></header>
 <main class="shell"><aside class="guide"><img class="owl" src="assets/arbo-uil.png" alt="AArno, de Arbo-uil"><div class="kicker">Welkom bij Arbo</div><h1>Zie het.<br>Bespreek het.<br>Doe het veilig.</h1><p>Leer risico’s herkennen en volg instructies om jezelf en anderen te beschermen.</p><div class="call"><strong>Jouw leerroute</strong><br>12 opdrachten · 240 SBU<br>Individueel portfolio · situaties uit werk, stage en school</div></aside><section class="menu"><div class="menuhead"><div><div class="kicker">Keuzedeel · niveau 2</div><h2>Opdrachtenmenu</h2><p>Kies een opdracht om te bekijken. Les 01 is volledig uitgewerkt.</p></div><div class="links"><a href="sbu.html">SBU-verantwoording ↗</a><a href="les-01.html">Start les 01 ↗</a></div></div><div class="tasks">
 <button class="task first" type="button" data-num="01" data-title="AArno’s Arbo-scan" data-sbu="8 SBU" data-desc="Kies een werkplek en herken twee soorten risico’s. Beschrijf gevolgen, een veilige actie, bij wie je meldt en één gezonde gewoonte." data-link="les-01.html"><span class="tasknum">01</span><span class="taskbody"><h3>AArno’s Arbo-scan</h3><p>Kies een plek en herken twee soorten risico’s.</p></span><span class="taskfoot"><span>8 SBU</span><b>COMPLETE LES</b><span class="arrow">↗</span></span></button>
