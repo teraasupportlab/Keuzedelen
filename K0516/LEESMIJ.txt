@@ -12,3 +12,6 @@ Inhoud
 - assets/: Ter AA-logo en AArno-afbeelding.
 
 De officiële studielast van K0516 is 240 SBU. De verdeling over opdrachten en onderdelen is een onderwijsvoorstel; SBB schrijft de verdeling per les niet voor.
+
+Weergave
+De pagina’s schalen automatisch naar het browservenster. Het donkerblauwe kader staat op een contrasterende lichtgrijze buitenachtergrond en veroorzaakt geen pagina-scrollbalken.
