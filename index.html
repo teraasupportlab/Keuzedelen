@@ -1,55 +1,141 @@
-<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>K0516 · Startmenu Arbo</title><style>
-:root{--navy:#07182e;--navy2:#102d50;--blue:#1a4672;--yellow:#f2ed22;--lime:#c7eb43;--signal:#49e66b;--orange:#ff7a1a;--cream:#fff8e8;--paper:#fff1d2;--ink:#102847;--muted:#607187}
-*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden;font-family:Inter,Arial,sans-serif}
-body{position:relative;background:radial-gradient(circle at 8% 12%,#fff8d6 0,transparent 20%),linear-gradient(135deg,#d5deea,#edf1f6);color:#edf4ff}
-.layout{position:absolute;left:0;top:0;width:1440px;height:850px;overflow:hidden;border:2px solid var(--yellow);border-radius:28px;background:radial-gradient(ellipse at 14% 0,#1a4571 0,transparent 38%),linear-gradient(135deg,#0b2443,#07182e 75%);box-shadow:0 28px 74px #07182e66,0 0 0 8px #ff7a1a25;transform-origin:top left}
-.layout:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.12;background-image:linear-gradient(#c6d7ef1c 1px,transparent 1px),linear-gradient(90deg,#c6d7ef1c 1px,transparent 1px);background-size:34px 34px;mask-image:linear-gradient(130deg,#000,transparent 78%)}
-.top{height:104px;padding:16px 28px;display:flex;align-items:center;gap:20px;border-bottom:1px solid #ffffff22;position:relative;z-index:1}.logo{width:155px;height:68px;object-fit:contain}.brandline{border-left:1px solid #f2ed2277;padding-left:20px;font-size:13px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:#e2ebf7}.topnav{margin-left:auto;display:flex;gap:8px}.topnav a{padding:9px 13px;border-radius:9px;background:#ffffff10;text-decoration:none;color:white;font-size:12px;font-weight:700}.topnav a:hover,.topnav a.active{background:var(--yellow);color:var(--ink)}
-.shell{position:relative;z-index:1;height:705px;padding:14px 22px 12px;display:grid;grid-template-columns:250px minmax(0,1fr);gap:16px}
-.guide{height:100%;border-radius:20px;background:linear-gradient(155deg,var(--yellow),var(--lime));color:#102847;padding:16px;position:relative;overflow:hidden;box-shadow:0 10px 24px #0003}.guide:after{content:"";position:absolute;inset:0;background:linear-gradient(130deg,#ffffff55,transparent 44%);pointer-events:none}.owl{width:175px;height:175px;object-fit:contain;display:block;margin:-2px auto 0;filter:drop-shadow(0 9px 9px #15243a42)}.kicker{color:#344b15;font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:900;margin:5px 0 7px}.guide h1{font-size:26px;line-height:1.02;letter-spacing:-.04em;color:#102847;margin:0 0 8px}.guide p{color:#253c55;font-size:12px;line-height:1.4;margin:0 0 9px}.guide .call{background:#102d50;color:#f7f9ed;border-radius:12px;padding:10px;font-size:11px;line-height:1.4}.guide .call strong{color:var(--yellow)}
-.menu{height:100%;min-width:0;display:flex;flex-direction:column}.menuhead{display:flex;justify-content:space-between;align-items:center;gap:14px;margin:0 1px 10px}.menuhead h2{font-size:26px;letter-spacing:-.035em;margin:0 0 3px;color:white}.menuhead p{font-size:12px;color:#cbd8e8;margin:0}.links{display:flex;gap:7px;flex:none}.links a{padding:8px 11px;border-radius:9px;text-decoration:none;color:#f7f8fa;background:#ffffff12;border:1px solid #ffffff24;font-size:10px;font-weight:800}.links a:hover{background:var(--yellow);color:var(--ink)}
-.tasks{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));gap:8px;min-height:0;flex:1}
-.task{width:100%;height:100%;border:1px solid #ffffff2a;border-radius:13px;background:linear-gradient(145deg,#ffffff17,#ffffff0a);color:#f4f7fb;text-align:left;padding:9px 10px;display:grid;grid-template-columns:27px 1fr;grid-template-rows:auto 1fr auto;column-gap:8px;row-gap:3px;position:relative;overflow:hidden;cursor:pointer;transition:transform .18s,border-color .18s,background .18s}
-.task:hover,.task:focus-visible{transform:translateY(-2px);border-color:var(--yellow);background:linear-gradient(145deg,#ffffff24,#ffffff0c);outline:none;box-shadow:0 7px 18px #0003}
-.task.first{border-color:#49e66b9c;background:linear-gradient(145deg,#49e66b25,#ffffff0a)}
-.tasknum{grid-column:1;grid-row:1/3;width:27px;height:27px;border-radius:8px;display:grid;place-items:center;background:var(--yellow);color:var(--ink);font-size:10px;font-weight:900}
-.taskbody{grid-column:2;grid-row:1/3;min-width:0}.task h3{font-size:14px;line-height:1.12;margin:0 0 4px;color:white;font-weight:800}.task p{font-size:11px;line-height:1.28;margin:0;color:#d4dfed;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.taskfoot{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:4px;margin-top:2px;padding-top:5px;border-top:1px solid #ffffff1c}.taskfoot span{color:var(--yellow);font-size:10px;font-weight:900}.taskfoot b{font-size:10px;color:#bdf7cb}.arrow{color:var(--signal);font-size:14px;font-weight:900}
-.pathline{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 11px;margin-top:9px;border-radius:11px;background:#ffffff0c;border:1px solid #ffffff1c;color:#e1eaf6;font-size:10px}.pathline b{color:var(--yellow)}.pathline .sep{color:var(--orange);font-size:15px}
-.total{height:44px;flex:none;display:flex;justify-content:space-between;align-items:center;margin-top:9px;padding:0 14px;border-radius:11px;background:linear-gradient(100deg,#49e66b,#b7f56b);color:#0b2a24;border:1px solid #bafcc3;box-shadow:0 0 20px #49e66b40;font-size:12px;font-weight:900}.total strong{font-size:18px;letter-spacing:.02em}
-.footer{position:absolute;bottom:0;left:0;right:0;height:28px;padding:0 25px;display:flex;align-items:center;justify-content:space-between;color:#cad7e8;font-size:10px;z-index:1}
-.dialogback{position:fixed;inset:0;z-index:10;background:#06152ad9;backdrop-filter:blur(9px);display:none;place-items:center;padding:20px}.dialogback.show{display:grid}.dialog{width:min(600px,92vw);border:1px solid #f2ed2280;border-radius:19px;background:linear-gradient(145deg,#fffdf6,#f2efdF);color:var(--ink);padding:22px;box-shadow:0 24px 80px #0008;position:relative}.dialog h2{font-size:24px;margin:0 35px 8px 0}.dialog p{font-size:14px;line-height:1.5}.dialog .meta{display:inline-block;background:var(--signal);padding:7px 10px;border-radius:99px;font-size:11px;font-weight:900}.close{position:absolute;right:14px;top:12px;border:0;border-radius:50%;width:32px;height:32px;background:var(--navy2);color:white;font-size:18px}.dialog a{display:inline-block;margin-top:10px;padding:10px 13px;border-radius:9px;background:var(--navy2);color:white;text-decoration:none;font-size:12px;font-weight:800}
-@media(max-width:900px){.top{padding:16px 28px}.shell{grid-template-columns:250px minmax(0,1fr)}}
-</style></head><body><div class="layout"><header class="top"><img class="logo" src="assets/ter-aa-logo.png" alt="Ter AA"><div class="brandline">K0516 · Verdieping blijvend fit,<br>veilig en gezond werken</div><nav class="topnav"><a class="active" href="index.html">Startmenu</a><a href="sbu.html">SBU-verantwoording</a><a href="les-01.html">Complete les 01</a></nav></header>
-<main class="shell"><aside class="guide"><img class="owl" src="assets/arbo-uil.png" alt="AArno, de Arbo-uil"><div class="kicker">Welkom bij Arbo</div><h1>Zie het.<br>Bespreek het.<br>Doe het veilig.</h1><p>Leer risico’s herkennen en volg instructies om jezelf en anderen te beschermen.</p><div class="call"><strong>Jouw leerroute</strong><br>12 opdrachten · 240 SBU<br>Individueel portfolio · situaties uit werk, stage en school</div></aside><section class="menu"><div class="menuhead"><div><div class="kicker">Keuzedeel · niveau 2</div><h2>Opdrachtenmenu</h2><p>Kies een opdracht om te bekijken. Les 01 is volledig uitgewerkt.</p></div><div class="links"><a href="sbu.html">SBU-verantwoording ↗</a><a href="les-01.html">Start les 01 ↗</a></div></div><div class="tasks">
-<button class="task first" type="button" data-num="01" data-title="AArno’s Arbo-scan" data-sbu="8 SBU" data-desc="Kies een werkplek en herken twee soorten risico’s. Beschrijf gevolgen, een veilige actie, bij wie je meldt en één gezonde gewoonte." data-link="les-01.html"><span class="tasknum">01</span><span class="taskbody"><h3>AArno’s Arbo-scan</h3><p>Kies een plek en herken twee soorten risico’s.</p></span><span class="taskfoot"><span>8 SBU</span><b>COMPLETE LES</b><span class="arrow">↗</span></span></button>
-<button class="task" type="button" data-num="02" data-title="Risico’s herkennen" data-sbu="14 SBU" data-desc="Oefen met fysieke en psychosociale risico’s. Benoem wat je ziet, wat er kan gebeuren en welke signalen je serieus moet nemen."><span class="tasknum">02</span><span class="taskbody"><h3>Risico’s herkennen</h3><p>Fysieke en psychosociale risico’s onderscheiden.</p></span><span class="taskfoot"><span>14 SBU</span><span class="arrow">↗</span></span></button>
-<button class="task" type="button" data-num="03" data-title="Lichaam en belasting" data-sbu="20 SBU" data-desc="Herken tillen, duwen, trekken, herhalen en lang stilzitten. Koppel de belasting aan mogelijke klachten en veilige werkafspraken."><span class="tasknum">03</span><span class="taskbody"><h3>Lichaam en belasting</h3><p>Tillen, herhalen, duwen en lang stilzitten.</p></span><span class="taskfoot"><span>20 SBU</span><span class="arrow">↗</span></span></button>
-<button class="task" type="button" data-num="04" data-title="Ergonomisch werken" data-sbu="20 SBU" data-desc="Bekijk de inrichting van een werkplek. Oefen met houding, afwisseling, beeldschermwerk en korte beweegmomenten."><span class="tasknum">04</span><span class="taskbody"><h3>Ergonomisch werken</h3><p>Werkplek, houding en bewegen afwisselen.</p></span><span class="taskfoot"><span>20 SBU</span><span class="arrow">↗</span></span></button>
-<button class="task" type="button" data-num="05" data-title="Arbeidsmiddelen en elektriciteit" data-sbu="20 SBU" data-desc="Herken risico’s bij gereedschap, machines en elektrische apparatuur. Volg instructies, controleer zichtbare schade en meld twijfel."><span class="tasknum">05</span><span class="taskbody"><h3>Arbeidsmiddelen & stroom</h3><p>Veilig werken met apparaten en gereedschap.</p></span><span class="taskfoot"><span>20 SBU</span><span class="arrow">↗</span></span></button>
-<button class="task" type="button" data-num="06" data-title="Gevaarlijke stoffen en geluid" data-sbu="20 SBU" data-desc="Leer etiketten en gevaren herkennen, blootstelling beperken en passende beschermingsmaatregelen uit instructies toepassen."><span class="tasknum">06</span><span class="taskbody"><h3>Stoffen & geluid</h3><p>Etiketten, blootstelling en bescherming.</p></span><span class="taskfoot"><span>20 SBU</span><span class="arrow">↗</span></span></button>
-<button class="task" type="button" data-num="07" data-title="Werkdruk en stress" data-sbu="20 SBU" data-desc="Herken signalen van werkdruk en stress. Oefen met prioriteiten vragen, grenzen aangeven en op tijd hulp zoeken."><span class="tasknum">07</span><span class="taskbody"><h3>Werkdruk & stress</h3><p>Signalen herkennen en prioriteiten bespreken.</p></span><span class="taskfoot"><span>20 SBU</span><span class="arrow">↗</span></span></button>
-<button class="task" type="button" data-num="08" data-title="Pesten, agressie en gedrag" data-sbu="20 SBU" data-desc="Herken psychosociale risico’s zoals pesten of agressie. Bespreek veilige reacties en volg de afspraken van de werkplek."><span class="tasknum">08</span><span class="taskbody"><h3>Pesten, agressie & gedrag</h3><p>Situaties herkennen en veilig reageren.</p></span><span class="taskfoot"><span>20 SBU</span><span class="arrow">↗</span></span></button>
-<button class="task" type="button" data-num="09" data-title="Melden en bespreekbaar maken" data-sbu="20 SBU" data-desc="Oefen hoe je feitelijk en respectvol een risico meldt bij een collega, begeleider of leidinggevende."><span class="tasknum">09</span><span class="taskbody"><h3>Melden & bespreken</h3><p>Een risico helder en respectvol melden.</p></span><span class="taskfoot"><span>20 SBU</span><span class="arrow">↗</span></span></button>
-<button class="task" type="button" data-num="10" data-title="Gezonde gewoontes (BRAVO)" data-sbu="20 SBU" data-desc="Onderzoek hoe bewegen, roken, alcohol, voeding en ontspanning invloed hebben op veilig en gezond werken."><span class="tasknum">10</span><span class="taskbody"><h3>Gezonde gewoontes</h3><p>BRAVO en fit blijven tijdens werk.</p></span><span class="taskfoot"><span>20 SBU</span><span class="arrow">↗</span></span></button>
-<button class="task" type="button" data-num="11" data-title="Oefenscan werkplek" data-sbu="24 SBU" data-desc="Voer met een begeleide checklist een risicoverkenning uit. Oefen het benoemen van gevolgen en het bespreken van passende acties."><span class="tasknum">11</span><span class="taskbody"><h3>Oefenscan werkplek</h3><p>Begeleid risico’s zoeken en acties bespreken.</p></span><span class="taskfoot"><span>24 SBU</span><span class="arrow">↗</span></span></button>
-<button class="task" type="button" data-num="12" data-title="Eindscan, portfolio en reflectie" data-sbu="34 SBU" data-desc="Werk je eigen Arbo-scan af, verzamel portfolio-bewijs, verwerk feedback en reflecteer op veilig en gezond werken."><span class="tasknum">12</span><span class="taskbody"><h3>Eindscan & portfolio</h3><p>Werk je scan af en reflecteer op je groei.</p></span><span class="taskfoot"><span>34 SBU</span><span class="arrow">↗</span></span></button>
-</div><div class="pathline"><span><b>LEERROUTE</b> &nbsp; Herkennen</span><span class="sep">›</span><span>Veilig handelen</span><span class="sep">›</span><span>Gezond blijven</span><span class="sep">›</span><span>Melden & reflecteren</span></div><div class="total"><span>KEUZEDEEL K0516 · 12 OPDRACHTEN</span><strong>240 SBU</strong></div></section></main><footer class="footer"><span>Ter AA · AArno begeleidt je bij veilig en gezond werken</span><span>K0516 · generiek keuzedeel</span></footer></div>
-<div class="dialogback" id="dialogback" role="dialog" aria-modal="true" aria-labelledby="dialogtitle"><div class="dialog"><button class="close" type="button" onclick="closeDialog()" aria-label="Venster sluiten">×</button><div class="kicker" id="dialognum">OPDRACHT</div><h2 id="dialogtitle"></h2><p id="dialogdesc"></p><span class="meta" id="dialogsbu"></span><div id="dialoglink"></div></div></div>
-<script>
-document.querySelectorAll(".task").forEach(button=>button.addEventListener("click",()=>{
- const link=button.dataset.link;
- if(link){location.href=link;return}
- document.getElementById("dialognum").textContent="OPDRACHT "+button.dataset.num;
- document.getElementById("dialogtitle").textContent=button.dataset.title;
- document.getElementById("dialogdesc").textContent=button.dataset.desc;
- document.getElementById("dialogsbu").textContent=button.dataset.sbu;
- document.getElementById("dialoglink").innerHTML="";
- document.getElementById("dialogback").classList.add("show");
- document.querySelector(".close").focus();
-}));
-function closeDialog(){document.getElementById("dialogback").classList.remove("show")}
-document.getElementById("dialogback").addEventListener("click",e=>{if(e.target.id==="dialogback")closeDialog()});
-document.addEventListener("keydown",e=>{if(e.key==="Escape")closeDialog()});
-(function(){const f=document.querySelector(".layout");function fit(){const s=Math.min((innerWidth-24)/1440,(innerHeight-24)/850);f.style.transform="scale("+s+")";f.style.left=Math.max(0,(innerWidth-1440*s)/2)+"px";f.style.top=Math.max(0,(innerHeight-850*s)/2)+"px"}addEventListener("resize",fit);fit()})();
-</script></body></html>
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keuzedelen | Ter AA ICT</title>
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      height: 540px;
+      overflow: hidden;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #fff;
+      background: #0b0e16;
+    }
+    body { padding: 0 10px 10px; }
+    main {
+      position: relative;
+      width: min(1000px, 100%);
+      height: 480px;
+      margin: 50px auto 0;
+      padding: 13px 24px;
+      border: 2px solid #ff5900;
+      border-radius: 20px;
+      background: linear-gradient(125deg, #101b32 0%, #25324d 35%, #694039 70%, #b44d20 100%);
+      box-shadow: 0 0 18px rgba(255, 89, 0, .25), inset 0 0 30px rgba(0, 0, 0, .3);
+    }
+    header { height: 62px; display: flex; justify-content: space-between; align-items: center; margin: 0 4px 12px; }
+    .logo { max-height: 54px; width: auto; object-fit: contain; }
+    .slogan { color: #ff5900; font-weight: 900; font-size: clamp(1.45rem, 3vw, 2.25rem); letter-spacing: .04em; text-shadow: 0 2px 9px #000, 0 0 13px rgba(255, 89, 0, .55); }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 21px 25px;
+      align-items: start;
+    }
+    .card { --colour: #62d7ff; text-align: center; }
+    .card a { display: inline-block; width: 100%; text-decoration: none; color: #fff; outline: none; }
+    .image-wrap {
+      position: relative;
+      display: block;
+      padding: 5px;
+      border-radius: 17px;
+      background: linear-gradient(135deg, color-mix(in srgb, var(--colour) 75%, white), var(--colour));
+      box-shadow: 0 0 12px var(--colour), 0 0 30px color-mix(in srgb, var(--colour) 68%, transparent), 0 0 60px color-mix(in srgb, var(--colour) 40%, transparent);
+      transition: transform .24s ease, box-shadow .24s ease, filter .24s ease;
+    }
+    img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 12px; background: #151925; }
+    .name { display: block; margin-top: 8px; font-size: clamp(.9rem, 1.45vw, 1.12rem); font-weight: 800; letter-spacing: .025em; text-shadow: 0 2px 8px #000; }
+    .card a:hover .image-wrap, .card a:focus-visible .image-wrap { transform: translateY(-8px) scale(1.025); filter: brightness(1.12); box-shadow: 0 0 16px var(--colour), 0 0 42px var(--colour), 0 0 80px color-mix(in srgb, var(--colour) 70%, transparent); }
+    .card a:focus-visible .image-wrap { outline: 3px solid #fff; outline-offset: 6px; }
+    .sigrid { --colour: #ff5900; }
+    .connected { --colour: #9447f0; }
+    .future { --colour: #27c6c1; }
+    .senr { --colour: #2f80ed; }
+    .greenpi { --colour: #90f87b; }
+    .bootup { --colour: #fade29; }
+    .firstline { --colour: #e53935; }
+    .bpv { --colour: #546e7a; }
+    .kilroy-window {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(250px, 60%);
+      aspect-ratio: 1;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 5;
+    }
+    .kilroy-window img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 1;
+      object-fit: contain;
+      border-radius: 0;
+      background: transparent;
+    }
+    @media (max-width: 700px) { .cards { grid-template-columns: repeat(2, minmax(135px, 1fr)); gap: 16px; } body { height: auto; min-height: 100vh; overflow: auto; } main { height: auto; min-height: 480px; padding: 13px 16px 22px; } }
+  
+    .heading { text-align: right; }
+    .heading h1 { margin: 0 0 3px; font-size: 25px; }
+    .heading .slogan { font-size: clamp(16px, 2.2vw, 24px); }
+    @media (max-width: 700px) {
+      .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      main { margin-top: 18px; }
+      .name { font-size: 14px; }
+    }
+  
+    .cards {width: 54%; grid-template-columns: minmax(0, 1fr); padding: 20px 18px 0;}
+    .card a {max-width: none;}
+    .name {font-size: 14px; margin-top: 12px;}
+    @media(max-width:700px) {
+      body {height:auto; min-height:100vh; overflow:auto;}
+      main {height:auto; min-height:480px;}
+      .cards {width:100%; padding:14px 0;}
+      .card a {max-width:320px;}
+          .heading h1 {font-size:21px;}
+    }
+    .cards {width:100%; grid-template-columns:repeat(4, minmax(0, 1fr)); justify-content:start; padding:20px 0 0; gap:20px;}
+    .wonen .image-wrap img {object-fit:cover; background:#101b32;}
+    @media(max-width:700px) {
+      .cards {grid-template-columns:repeat(2,minmax(0,1fr)); padding:14px 0; gap:16px;}
+      .card a {max-width:280px;}
+      .name {font-size:14px; margin-top:12px;}
+    }
+</style>
+</head>
+<body>
+  <main>
+    <header>
+      <a href="https://www.ter-aa.nl/" aria-label="Naar de website van Ter AA"><img class="logo" src="afbeeldingen/ter-aa-logo.png" alt="Ter AA"></a>
+      <div class="heading"><h1>Keuzedelen</h1><div class="slogan">Future in the making</div></div>
+    </header>
+    <section class="cards" aria-label="Keuzedelen">
+      <!-- Voeg toekomstige keuzedelen toe als extra article in dit raster. -->
+      <article class="card" style="--colour: #27c6c1">
+        <a href="K0022/" aria-label="Open keuzedeel K0022 Digitale vaardigheden">
+          <span class="image-wrap"><img src="afbeeldingen/k0022-digitale-vaardigheden.png" alt="K0022 Digitale vaardigheden met Microsoft 365 en Copilot"></span>
+          <span class="name">K0022 · Digitale vaardigheden</span>
+        </a>
+      </article>
+      <article class="card wonen" style="--colour: #90c88a">
+        <a href="K0877/" aria-label="Open K0877 Praktisch zelfstandig wonen met kAArel">
+          <span class="image-wrap"><img src="afbeeldingen/k0877-praktisch-zelfstandig-wonen.png?v=groen" alt="kAArel, de handige huismascotte"></span>
+          <span class="name">K0877 · Praktisch zelfstandig wonen</span>
+        </a>
+      </article>
+      <article class="card arbo" style="--colour: #f2ed22">
+        <a href="K0516/" aria-label="Open K0516 Arbo: fit, veilig en gezond werken">
+          <span class="image-wrap"><img src="afbeeldingen/k0516-arbo.png" alt="K0516 Arbo met AArno: fit, veilig en gezond werken"></span>
+          <span class="name">K0516 · Arbo</span>
+        </a>
+      </article>
+    </section>
+  </main>
+  
+</body>
+</html>
