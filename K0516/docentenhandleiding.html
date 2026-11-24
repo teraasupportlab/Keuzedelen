@@ -1,0 +1,118 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Docentenhandleiding · K0516 · Docentversie</title><style>
+:root{--navy:#07182e;--navy2:#102d50;--blue:#1a4672;--yellow:#f2ed22;--lime:#c7eb43;--orange:#ff7a1a;--cream:#fff8e8;--paper:#fff1d2;--ink:#102847;--muted:#607187;--line:#e5dcc5}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,Arial,sans-serif;color:#edf4ff}body{background:radial-gradient(ellipse at 15% 0,#1a4571 0,transparent 38%),linear-gradient(135deg,#07182e,#050f20);padding:18px}
+a{color:inherit}button{font:inherit;cursor:pointer}.layout{max-width:1440px;margin:auto;min-height:850px;border:1px solid #ffffff20;border-radius:28px;overflow:hidden;position:relative;background:linear-gradient(120deg,#0b2443,#07182e 72%);box-shadow:0 24px 65px #0007}.layout:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.12;background-image:linear-gradient(#c6d7ef1c 1px,transparent 1px),linear-gradient(90deg,#c6d7ef1c 1px,transparent 1px);background-size:34px 34px;mask-image:linear-gradient(130deg,#000,transparent 78%)}
+.top{height:104px;padding:16px 28px;display:flex;align-items:center;gap:20px;border-bottom:1px solid #fff2;position:relative;z-index:1}.logo{width:155px;height:68px;object-fit:contain}.brandline{border-left:1px solid #f2ed2277;padding-left:20px;font-size:13px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:#e2ebf7}.topnav{margin-left:auto;display:flex;gap:8px}.topnav a{padding:9px 13px;border-radius:9px;background:#ffffff10;text-decoration:none;font-size:12px;font-weight:700}.topnav a:hover,.topnav a.active{background:var(--yellow);color:var(--ink)}
+h1,h2,h3,p{margin-top:0}h1{font-size:34px;line-height:1.04;letter-spacing:-.04em;color:#fff;margin-bottom:10px}h2{font-size:19px;line-height:1.15;color:var(--ink);margin-bottom:9px}h3{font-size:14px;color:var(--ink);margin-bottom:7px}p{font-size:13px;line-height:1.48;margin-bottom:9px}
+.kicker{color:var(--yellow);font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;margin:0 0 8px}.lede{color:#d3deed;font-size:15px;max-width:800px}
+.card{background:linear-gradient(145deg,#fffdf8,#f3f0e4);color:var(--ink);border:1px solid #ffffffb9;border-radius:17px;padding:16px;box-shadow:0 9px 22px #0002}.card.orange{border-top:5px solid var(--orange)}.card.lime{border-top:5px solid var(--lime)}.card.yellow{border-top:5px solid var(--yellow)}
+.pill{display:inline-flex;align-items:center;border-radius:99px;padding:7px 11px;background:#c7eb43;font-size:11px;font-weight:800;color:#132640}.pill.orange{background:#ffd0a4}.pill.yellow{background:var(--yellow)}
+.footer{color:#cad7e8;font-size:11px;padding:14px 26px;display:flex;justify-content:space-between;position:relative;z-index:1}
+@media(max-width:850px){body{padding:8px}.layout{min-height:100vh;border-radius:18px}.top{height:auto;flex-wrap:wrap;padding:12px}.logo{width:120px;height:55px}.topnav{width:100%;margin-left:0;flex-wrap:wrap}.topnav a{padding:8px}.footer{flex-direction:column;gap:6px}}
+
+html,body{width:100%;height:100%;min-height:0;overflow:hidden}
+body{padding:0;display:block;position:relative;background:radial-gradient(circle at 8% 12%,#fff8d6 0,transparent 20%),linear-gradient(135deg,#d5deea,#edf1f6)}
+.layout{position:absolute;left:0;top:0;width:1440px;height:850px;min-height:0;max-width:none;margin:0;overflow:hidden;transform-origin:top left;border:2px solid #f2ed22;box-shadow:0 28px 74px #07182e66,0 0 0 8px #ff7a1a25}
+.startgrid{height:705px;min-height:0;box-sizing:border-box;padding:15px 24px;overflow:hidden}
+.guide{height:100%;min-height:0}
+.tasks{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr));height:560px}
+.task{height:100%;min-height:0}
+.sbu-wrap{height:705px;box-sizing:border-box;overflow:hidden;padding:22px 28px}
+.sbu-grid{height:585px;overflow:hidden}
+.tablecard,.reason{height:100%;overflow:hidden}
+.lesson-shell{height:705px;box-sizing:border-box;grid-template-columns:205px minmax(0,1fr);padding:15px 20px}
+.tab{height:490px;max-height:490px;overflow:hidden}
+@media(max-width:1200px){
+ .top{height:104px;flex-wrap:nowrap;padding:16px 28px}
+ .logo{width:155px;height:68px}
+ .brandline{font-size:13px}
+ .topnav{width:auto;margin-left:auto;flex-wrap:nowrap}
+ .startgrid{grid-template-columns:285px minmax(0,1fr);padding:15px 24px;height:705px}
+ .guide{display:block;min-height:0}
+ .guide .owl{width:220px;height:210px}
+ .tasks{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr));height:560px}
+ .task{min-height:0;height:100%}
+ .contenthead{display:flex}
+ .actions{margin-top:0}
+ .sbu-wrap{padding:22px 28px;height:705px}
+ .sbu-grid{grid-template-columns:1.15fr .85fr;height:585px}
+ .sbu-head{display:flex}
+ .lesson-shell{grid-template-columns:205px minmax(0,1fr);height:705px;padding:15px 20px}
+ .side{display:flex;flex-direction:column}
+ .side img{width:145px;height:155px;grid-row:auto}
+ .side .sidefoot{grid-column:auto}
+ .columns,.checklist{grid-template-columns:1fr 1fr}
+ .tab{height:490px;max-height:490px;overflow:hidden}
+ .footer{flex-direction:row;gap:0}
+}
+
+</style><style>
+.lesson-shell{position:relative;z-index:1;display:grid;grid-template-columns:205px minmax(0,1fr);gap:16px;padding:15px 20px;height:710px}.side{border-radius:19px;background:linear-gradient(160deg,var(--yellow),var(--lime));color:#102847;padding:14px;display:flex;flex-direction:column;overflow:hidden}.side img{width:145px;height:155px;object-fit:contain;align-self:center;filter:drop-shadow(0 8px 8px #1d2e4450)}.side .kicker{color:#3b5111}.side h2{font-size:22px;color:#102847}.side p{font-size:11px}.side .sidefoot{margin-top:auto;background:#102d50;color:#f7f9ed;border-radius:11px;padding:10px;font-size:10px;line-height:1.4}.sidefoot b{color:var(--yellow)}
+.mainpanel{background:linear-gradient(115deg,#fff9ea,#fff0d1);border-radius:22px;padding:18px 20px;color:var(--ink);box-shadow:0 12px 28px #0003;overflow:hidden}.crumb{font-size:10px;color:#63778b;margin-bottom:5px}.mainpanel h1{font-size:28px;color:#112d4e;margin-bottom:7px}.metas{display:flex;gap:7px;margin-bottom:10px}.tabs{display:flex;gap:4px;flex-wrap:wrap;border-bottom:3px solid #ff7a1a55;margin-bottom:11px}.tabs button{border:1px solid #e0d1ae;border-bottom:0;background:transparent;padding:8px 10px;border-radius:9px 9px 0 0;color:#24405d;font-size:10px;font-weight:800}.tabs button.active{background:#102d50;color:white;border-color:#102d50;box-shadow:inset 0 3px var(--yellow)}.tab{display:none;height:530px;overflow:hidden}.tab.active{display:block}.tab h2{font-size:17px}.tab p,.tab li{font-size:11px;line-height:1.4}.tab ul,.tab ol{margin:5px 0 8px;padding-left:18px}.tab li{margin-bottom:4px}.columns{display:grid;grid-template-columns:1fr 1fr;gap:9px}.box{background:#fffdf8;border:1px solid #e6dbc1;border-radius:13px;padding:11px}.box.orange{border-top:4px solid var(--orange)}.box.lime{border-top:4px solid var(--lime)}.box.yellow{border-top:4px solid var(--yellow)}.callout{margin-top:8px;border-left:4px solid var(--orange);background:#ff7a1a12;border-radius:8px;padding:8px 10px;font-size:10px;line-height:1.4}.checklist{display:grid;grid-template-columns:1fr 1fr;gap:6px}.check{background:#fffdf8;border:1px solid #e7dfcc;border-radius:9px;padding:8px;font-size:10px;line-height:1.3}.schedule{width:100%;border-collapse:collapse;font-size:10px}.schedule th,.schedule td{text-align:left;padding:5px 7px;border-bottom:1px solid #e5dbc6}.schedule th{background:#e8efd8}.teacherNote{background:#eaf1dd;border-radius:10px;padding:9px 10px;font-size:10px;line-height:1.4;margin:7px 0}
+@media(max-width:850px){.lesson-shell{height:auto;grid-template-columns:1fr;padding:12px}.side{display:grid;grid-template-columns:100px 1fr;align-items:center}.side img{width:90px;height:95px;grid-row:span 2}.side .sidefoot{grid-column:1/-1}.mainpanel{padding:14px}.tab{height:auto;max-height:none;overflow:visible}.columns,.checklist{grid-template-columns:1fr}}
+</style><style id="leesbaarheid">
+body{font-size:16px}
+.brandline{font-size:15px!important}.topnav a{font-size:15px!important}
+.kicker{font-size:13px!important;letter-spacing:.12em}
+h1{font-size:37px!important;line-height:1.08!important}
+h2{font-size:23px!important;line-height:1.2!important}
+h3{font-size:18px!important;line-height:1.2!important}
+p{font-size:15px!important;line-height:1.48!important}
+.lede{font-size:17px!important;line-height:1.45!important}
+.pill{font-size:14px!important;padding:8px 12px}
+.footer{font-size:13px!important}
+.side h2{font-size:24px!important}.side p{font-size:14px!important;line-height:1.45!important}
+.side .sidefoot{font-size:13px!important;line-height:1.45!important}
+.crumb{font-size:13px!important}
+.mainpanel h1{font-size:32px!important;line-height:1.1!important}
+.tabs button{font-size:13px!important;padding:9px 11px}
+.tab{font-size:15px!important}
+.tab h2{font-size:21px!important}
+.tab p,.tab li{font-size:14px!important;line-height:1.45!important}
+.box h3{font-size:17px!important}
+.callout,.teacherNote{font-size:13px!important;line-height:1.45!important}
+.check{font-size:13px!important;line-height:1.4!important;padding:9px}
+.schedule{font-size:13px!important}
+.schedule th,.schedule td{font-size:13px!important;line-height:1.35!important;padding:6px 7px}
+/* Extra leesbaarheid voor de lesinhoud en AArno's gele zijvlak. */
+.crumb{font-size:15px!important}
+.mainpanel h1{font-size:35px!important}
+.tabs button{font-size:15px!important;padding:10px 12px}
+.tab h2{font-size:24px!important}
+.tab p,.tab li{font-size:17px!important;line-height:1.45!important}
+.box h3{font-size:20px!important}
+.callout,.teacherNote{font-size:15px!important;line-height:1.45!important}
+.check{font-size:15px!important;line-height:1.4!important}
+.schedule,.schedule th,.schedule td{font-size:15px!important;line-height:1.35!important}
+.side .kicker{font-size:16px!important}
+.side h2{font-size:29px!important;line-height:1.16!important}
+.side p{font-size:18px!important;line-height:1.4!important}
+.side .sidefoot{font-size:16px!important;line-height:1.45!important}
+/* Meer ruimte voor de grotere lesletters, zonder een scrollbar te maken. */
+.layout{height:864px!important}
+.top{height:94px!important;padding:10px 28px!important}
+.lesson-shell{height:740px!important}
+.mainpanel{padding:10px 20px!important}
+.tab{height:560px!important;max-height:560px!important}
+.footer{padding:8px 26px!important}
+@media(max-width:850px){.tab{height:auto;max-height:none;overflow:visible}}
+</style>
+<style id="docent-design">
+:root{--navy:#301b36;--navy2:#482744;--blue:#60405d;--yellow:#c6e2c1;--lime:#93c6a1;--orange:#e98f72;--cream:#fffaf1;--paper:#f7eadb;--ink:#35283a;--muted:#716579;--line:#e5d8cd}
+html,body{background:#e9e0d9!important;color:#35283a!important}body{background:radial-gradient(circle at 12% 5%,#fff9ed 0,transparent 35%),linear-gradient(140deg,#d7e2d7,#eee3dd)!important}
+.layout{background:#f3ece4!important;border:2px solid #8db79a!important;box-shadow:0 24px 60px #39263e40!important}.layout:before{opacity:.07!important}
+.top{background:#39263e!important;border-bottom:5px solid #8db79a!important}.brandline{color:#fff5e9!important;border-color:#e98f72!important}.topnav a{background:#60405d!important;color:#fff!important}.topnav a.active,.topnav a:hover{background:#c6e2c1!important;color:#35283a!important}
+.teacher-only{margin-left:auto;background:#e98f72;color:#301b36;border-radius:99px;padding:9px 15px;font-size:14px;font-weight:900;letter-spacing:.08em}.side{background:linear-gradient(145deg,#dcebd9,#c6e2c1)!important}.side .kicker{color:#60405d!important}.side .sidefoot{background:#39263e!important;color:#fff5e9!important}.side .sidefoot b{color:#c6e2c1!important}
+.mainpanel{background:linear-gradient(140deg,#fffdf8,#f7eadb)!important;border:1px solid #ded0c2!important}.mainpanel h1{color:#39263e!important}.crumb{color:#716579!important}.pill{background:#c6e2c1!important;color:#35283a!important}.pill.orange{background:#f5c3ad!important}.pill.yellow{background:#c6e2c1!important}
+.tabs{border-color:#e98f72!important}.tabs button{background:#f3e8df!important;border-color:#d8c8bd!important;color:#39263e!important}.tabs button.active{background:#39263e!important;color:#fff!important;box-shadow:inset 0 3px #c6e2c1!important}.box{background:#fffdf9!important;border-color:#e3d6ca!important}.box.orange{border-top-color:#e98f72!important}.box.lime{border-top-color:#93c6a1!important}.box.yellow{border-top-color:#c6e2c1!important}.callout{border-color:#e98f72!important;background:#e98f7218!important}.teacherNote{background:#e2eddf!important}.schedule th{background:#e2eddf!important}.footer{color:#604d63!important}
+@media(max-width:850px){.teacher-only{margin-left:0}.top{gap:10px}}
+</style></head><body><div class="layout"><header class="top"><img class="logo" src="ter-aa-logo.png" alt="Ter AA"><div class="brandline">K0516 · Docentenhandleiding</div><span class="teacher-only">ALLEEN VOOR DOCENT</span></header><div class="lesson-shell"><aside class="side"><img src="docent-aArno.png" alt="Docent AArno met professorpet en zwarte toga"><div class="kicker">Voor de docent · niveau 2</div><h2>Zo geef je K0516</h2><p>Een stap-voor-stap handleiding voor wie dit keuzedeel nog niet eerder gaf.</p><div class="sidefoot"><b>Keuzedeel</b><br>K0516 · 12 opdrachten<br><br><b>Studielast</b><br>240 SBU totaal</div></aside><main class="mainpanel"><div class="crumb">K0516 / Docentenmateriaal / Handleiding</div><h1>Docentenhandleiding</h1><div class="metas"><span class="pill yellow">12 lessen</span><span class="pill">Niveau 2</span><span class="pill orange">Praktisch stappenplan</span></div><nav class="tabs" role="tablist"><button class="active" onclick="tab('start',this)">Start</button><button onclick="tab('voorbereiden',this)">Voorbereiden</button><button onclick="tab('route1',this)">Lessen 01–04</button><button onclick="tab('route2',this)">Lessen 05–08</button><button onclick="tab('route3',this)">Lessen 09–12</button><button onclick="tab('beoordelen',this)">Beoordelen</button><button onclick="tab('veiligheid',this)">Veiligheid</button></nav>
+<section id="start" class="tab active"><h2>Begin hier: wat is dit keuzedeel?</h2><p>K0516 gaat over fit, veilig en gezond werken. Studenten leren op basis van instructies lichamelijke en psychosociale risico’s herkennen en beheersen, hulp inschakelen, situaties bespreekbaar maken en leefgewoontes onderzoeken. De officiële studielast is 240 SBU.</p><div class="columns"><article class="box orange"><h3>Jouw rol als docent</h3><p>Je hoeft geen Arbo-specialist te zijn. Begeleid het kijken, vragen stellen, veilig handelen volgens instructie en op tijd overdragen aan de verantwoordelijke.</p></article><article class="box lime"><h3>Wat doet de student?</h3><p>De student observeert, beschrijft feiten, denkt na over gevolgen en oefent een passende meldzin. De student repareert of beoordeelt geen echte risico’s.</p></article></div><div class="callout"><b>Uren:</b> de 12 opdrachten vormen in dit onderwijsvoorstel samen 240 SBU. De verdeling per opdracht is een lokale planning, geen door SBB voorgeschreven lesrooster. <a href="https://kwalificatiestructuur-mijn.s-bb.nl/keuzedeel/details/682d76be-3ed4-45eb-9b27-9fe603a6fb6c" target="_blank" rel="noopener">Bekijk het keuzedeel bij SBB ↗</a></div></section>
+<section id="voorbereiden" class="tab"><h2>Voorbereiden in 10 minuten</h2><div class="columns"><article class="box orange"><h3>Voor de les</h3><ol><li>Pak de hele map uit en open <b>index.html</b>. Laat de map <b>assets</b> op zijn plek.</li><li>Kies in het startmenu de les die je geeft. Lees in die les eerst de tab <b>Docent</b>.</li><li>Leg de genoemde kaarten, foto’s, checklist of portfolio klaar. Gebruik geen echte gevaarlijke situatie als oefenmateriaal.</li><li>Zoek vooraf de docent, stagebegeleider of contactpersoon die studenten bij een echt risico moeten inschakelen.</li></ol></article><article class="box lime"><h3>Zet het doel neer</h3><p>Zeg bijvoorbeeld: <b>“Vandaag oefenen we met risico’s herkennen en veilig bespreken. Je hoeft niets zelf te repareren of op te lossen. Bij twijfel vraag je hulp.”</b></p><p>Vertel wat de student aan het einde inlevert en welke afspraken voor privacy en veiligheid gelden.</p></article></div><div class="callout"><b>Vaste vragen op iedere les:</b> Wat zie je? Wat kan er gebeuren? Wat zegt de instructie? Wie moet je informeren?</div></section>
+<section id="route1" class="tab"><h2>Lesroute 01–04 · herkennen en houding</h2><div class="columns"><article class="box orange"><h3>01 · AArno’s Arbo-scan · 8 SBU</h3><p>Model één risico met de vier vragen. Student beschrijft één lichamelijk en één psychosociaal risico en levert de scan in.</p><p><b>Check:</b> gevolg, veilige eerste stap en meldpersoon staan erbij.</p></article><article class="box lime"><h3>02 · Risico’s herkennen · 14 SBU</h3><p>Laat studenten situaties sorteren. Vraag steeds: “Wat zie je letterlijk?” en “Welk gevolg is mogelijk?”</p><p><b>Check:</b> risico is benoemd zonder iemand de schuld te geven.</p></article><article class="box yellow"><h3>03 · Lichaam en belasting · 20 SBU</h3><p>Werk met foto’s of een lege demonstratieverpakking. Bespreek tillen, herhalen, houding en herstel.</p><p><b>Check:</b> student stelt geen diagnose en volgt de werkafspraak.</p></article><article class="box"><h3>04 · Ergonomisch werken · 20 SBU</h3><p>Gebruik een checklist op een foto of vrijgegeven werkplek. Laat instellingen alleen aanpassen met toestemming.</p><p><b>Check:</b> student onderbouwt één passende verbetering.</p></article></div><div class="callout"><b>Docenttip:</b> doe les 01 eerst hardop voor. Denk zichtbaar na; laat daarna studenten hetzelfde stappenplan gebruiken.</div></section>
+<section id="route2" class="tab"><h2>Lesroute 05–08 · gevaren en sociale veiligheid</h2><div class="columns"><article class="box orange"><h3>05 · Arbeidsmiddelen en elektriciteit · 20 SBU</h3><p>Gebruik foto’s van schade. Studenten testen, openen of repareren niets. Oefen stopzetten, afstand houden en melden.</p><p><b>Check:</b> student raakt het verdachte middel niet aan.</p></article><article class="box lime"><h3>06 · Stoffen en geluid · 20 SBU</h3><p>Oefen met etiketfoto’s en een voorbeeldveiligheidsblad. Gebruik of open geen echte stof.</p><p><b>Check:</b> student weet waar de instructie staat en vraagt hulp bij ontbrekende informatie.</p></article><article class="box yellow"><h3>07 · Werkdruk en stress · 20 SBU</h3><p>Gebruik fictieve taken en een prioriteitenkaart. Oefen met rustig vragen welke taak voorrang heeft.</p><p><b>Check:</b> student benoemt signalen zonder diagnose of gedwongen persoonlijke onthulling.</p></article><article class="box"><h3>08 · Pesten, agressie en gedrag · 20 SBU</h3><p>Gebruik alleen fictieve scenario’s. Oefen afstand houden, grenzen en de juiste meldroute; speel geen agressie na.</p><p><b>Check:</b> student weet wanneer hij de situatie overdraagt.</p></article></div></section>
+<section id="route3" class="tab"><h2>Lesroute 09–12 · melden en afronden</h2><div class="columns"><article class="box orange"><h3>09 · Melden en bespreken · 20 SBU</h3><p>Laat studenten een vage melding herschrijven als feitelijke waarneming met plek en vraag.</p><p><b>Check:</b> urgent gevaar wordt direct volgens de locatieprocedure gemeld.</p></article><article class="box lime"><h3>10 · Gezonde gewoontes · 20 SBU</h3><p>Introduceer BRAVO en laat ieder één haalbare gewoonte kiezen. Beoordeel niet iemands leefstijl.</p><p><b>Check:</b> plan is concreet, vrijwillig en gekoppeld aan de werkafspraken.</p></article><article class="box yellow"><h3>11 · Oefenscan werkplek · 24 SBU</h3><p>Kies en controleer vooraf de observatieplek. Begeleid de scan; studenten veranderen niets zelf.</p><p><b>Check:</b> feiten, gevolgen, prioriteit en afgesproken vervolg zijn zichtbaar.</p></article><article class="box"><h3>12 · Eindscan, portfolio en reflectie · 34 SBU</h3><p>Laat studenten bewijs kiezen, feedback verwerken en hun leerstap toelichten.</p><p><b>Check:</b> scan, portfolio en reflectie zijn duidelijk en privacybewust.</p></article></div><div class="callout"><b>Planning:</b> kijk in de tab <b>Docent</b> van iedere les voor de faseverdeling. De uren omvatten ook zelfstandig werk, portfolio en feedback.</div></section>
+<section id="beoordelen" class="tab"><h2>Zo geef je feedback en beoordeel je</h2><div class="columns"><article class="box orange"><h3>Vier vaste criteria</h3><ol><li>De student beschrijft wat er waarneembaar is.</li><li>De student noemt een logisch mogelijk gevolg.</li><li>De student kiest een veilige stap binnen de instructie en eigen rol.</li><li>De student weet wie geïnformeerd moet worden en levert begrijpelijk bewijs in.</li></ol></article><article class="box lime"><h3>Feedback in één minuut</h3><p>1. Benoem één concreet sterk punt.<br>2. Kies één criterium dat nog mist.<br>3. Stel een vraag in plaats van het antwoord over te nemen.<br>4. Laat de student de verbetering zelf in het portfolio verwerken.</p><p><b>Voorbeeld:</b> “Je hebt de plek genoemd. Welk gevolg kan hier gebeuren, en wie moet je volgens de afspraak informeren?”</p></article></div><div class="teacherNote"><b>Niet beoordelen:</b> persoonlijke gezondheidsinformatie, privékeuzes of het delen van een eigen ervaring. Beoordeel de opdracht en het veilig redeneren.</div></section>
+<section id="veiligheid" class="tab"><h2>Veiligheid, lastige situaties en differentiatie</h2><div class="columns"><article class="box orange"><h3>Stop en draag over</h3><ul><li>Bij direct gevaar stopt de oefening; volg de lokale meld- en noodprocedure.</li><li>Studenten aanraken, openen, testen of repareren geen beschadigde elektrische middelen.</li><li>Gebruik bij stoffen alleen etiketfoto’s of voorbeeldbladen; geen openen, ruiken, mengen of gebruiken.</li><li>De scan is een leeroefening en vervangt geen RI&amp;E of deskundige beoordeling.</li></ul></article><article class="box lime"><h3>Als iemand vastloopt</h3><ul><li>Geef een foto of ingevuld voorbeeld en laat de student één vraag tegelijk beantwoorden.</li><li>Bied zinsstarters: “Ik zie…”, “Het gevolg kan zijn…”, “Ik vraag…”.</li><li>Laat antwoorden eerst mondeling geven of in duo’s oefenen.</li><li>Bij persoonlijke signalen: luister, dwing geen details af en volg de begeleidingsroute van school.</li></ul></article></div><div class="callout"><b>Belangrijkste vuistregel:</b> studenten leren herkennen, instructies volgen en hulp inschakelen. Ze hoeven geen Arbo-expert te worden.</div></section>
+</main></div><footer class="footer"><span>Ter AA · K0516 · Docentenhandleiding · docentversie</span><span>Lesplanning is een onderwijsvoorstel</span></footer></div><script>function tab(id,btn){document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".tabs button").forEach(x=>x.classList.remove("active"));document.getElementById(id).classList.add("active");btn.classList.add("active")}</script><script>(function(){const f=document.querySelector('.layout');function fit(){const s=Math.min((innerWidth-24)/1440,(innerHeight-24)/864);f.style.transform='scale('+s+')';f.style.left=Math.max(0,(innerWidth-1440*s)/2)+'px';f.style.top=Math.max(0,(innerHeight-864*s)/2)+'px'}addEventListener('resize',fit);fit()})();</script>
+</body></html>
