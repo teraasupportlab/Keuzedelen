@@ -1,0 +1,101 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Les 11 · Oefenscan werkplek</title><style>
+:root{--navy:#07182e;--navy2:#102d50;--blue:#1a4672;--yellow:#f2ed22;--lime:#c7eb43;--orange:#ff7a1a;--cream:#fff8e8;--paper:#fff1d2;--ink:#102847;--muted:#607187;--line:#e5dcc5}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,Arial,sans-serif;color:#edf4ff}body{background:radial-gradient(ellipse at 15% 0,#1a4571 0,transparent 38%),linear-gradient(135deg,#07182e,#050f20);padding:18px}
+a{color:inherit}button{font:inherit;cursor:pointer}.layout{max-width:1440px;margin:auto;min-height:850px;border:1px solid #ffffff20;border-radius:28px;overflow:hidden;position:relative;background:linear-gradient(120deg,#0b2443,#07182e 72%);box-shadow:0 24px 65px #0007}.layout:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.12;background-image:linear-gradient(#c6d7ef1c 1px,transparent 1px),linear-gradient(90deg,#c6d7ef1c 1px,transparent 1px);background-size:34px 34px;mask-image:linear-gradient(130deg,#000,transparent 78%)}
+.top{height:104px;padding:16px 28px;display:flex;align-items:center;gap:20px;border-bottom:1px solid #fff2;position:relative;z-index:1}.logo{width:155px;height:68px;object-fit:contain}.brandline{border-left:1px solid #f2ed2277;padding-left:20px;font-size:13px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:#e2ebf7}.topnav{margin-left:auto;display:flex;gap:8px}.topnav a{padding:9px 13px;border-radius:9px;background:#ffffff10;text-decoration:none;font-size:12px;font-weight:700}.topnav a:hover,.topnav a.active{background:var(--yellow);color:var(--ink)}
+h1,h2,h3,p{margin-top:0}h1{font-size:34px;line-height:1.04;letter-spacing:-.04em;color:#fff;margin-bottom:10px}h2{font-size:19px;line-height:1.15;color:var(--ink);margin-bottom:9px}h3{font-size:14px;color:var(--ink);margin-bottom:7px}p{font-size:13px;line-height:1.48;margin-bottom:9px}
+.kicker{color:var(--yellow);font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;margin:0 0 8px}.lede{color:#d3deed;font-size:15px;max-width:800px}
+.card{background:linear-gradient(145deg,#fffdf8,#f3f0e4);color:var(--ink);border:1px solid #ffffffb9;border-radius:17px;padding:16px;box-shadow:0 9px 22px #0002}.card.orange{border-top:5px solid var(--orange)}.card.lime{border-top:5px solid var(--lime)}.card.yellow{border-top:5px solid var(--yellow)}
+.pill{display:inline-flex;align-items:center;border-radius:99px;padding:7px 11px;background:#c7eb43;font-size:11px;font-weight:800;color:#132640}.pill.orange{background:#ffd0a4}.pill.yellow{background:var(--yellow)}
+.footer{color:#cad7e8;font-size:11px;padding:14px 26px;display:flex;justify-content:space-between;position:relative;z-index:1}
+@media(max-width:850px){body{padding:8px}.layout{min-height:100vh;border-radius:18px}.top{height:auto;flex-wrap:wrap;padding:12px}.logo{width:120px;height:55px}.topnav{width:100%;margin-left:0;flex-wrap:wrap}.topnav a{padding:8px}.footer{flex-direction:column;gap:6px}}
+
+html,body{width:100%;height:100%;min-height:0;overflow:hidden}
+body{padding:0;display:block;position:relative;background:radial-gradient(circle at 8% 12%,#fff8d6 0,transparent 20%),linear-gradient(135deg,#d5deea,#edf1f6)}
+.layout{position:absolute;left:0;top:0;width:1440px;height:850px;min-height:0;max-width:none;margin:0;overflow:hidden;transform-origin:top left;border:2px solid #f2ed22;box-shadow:0 28px 74px #07182e66,0 0 0 8px #ff7a1a25}
+.startgrid{height:705px;min-height:0;box-sizing:border-box;padding:15px 24px;overflow:hidden}
+.guide{height:100%;min-height:0}
+.tasks{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr));height:560px}
+.task{height:100%;min-height:0}
+.sbu-wrap{height:705px;box-sizing:border-box;overflow:hidden;padding:22px 28px}
+.sbu-grid{height:585px;overflow:hidden}
+.tablecard,.reason{height:100%;overflow:hidden}
+.lesson-shell{height:705px;box-sizing:border-box;grid-template-columns:205px minmax(0,1fr);padding:15px 20px}
+.tab{height:490px;max-height:490px;overflow:hidden}
+@media(max-width:1200px){
+ .top{height:104px;flex-wrap:nowrap;padding:16px 28px}
+ .logo{width:155px;height:68px}
+ .brandline{font-size:13px}
+ .topnav{width:auto;margin-left:auto;flex-wrap:nowrap}
+ .startgrid{grid-template-columns:285px minmax(0,1fr);padding:15px 24px;height:705px}
+ .guide{display:block;min-height:0}
+ .guide .owl{width:220px;height:210px}
+ .tasks{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr));height:560px}
+ .task{min-height:0;height:100%}
+ .contenthead{display:flex}
+ .actions{margin-top:0}
+ .sbu-wrap{padding:22px 28px;height:705px}
+ .sbu-grid{grid-template-columns:1.15fr .85fr;height:585px}
+ .sbu-head{display:flex}
+ .lesson-shell{grid-template-columns:205px minmax(0,1fr);height:705px;padding:15px 20px}
+ .side{display:flex;flex-direction:column}
+ .side img{width:145px;height:155px;grid-row:auto}
+ .side .sidefoot{grid-column:auto}
+ .columns,.checklist{grid-template-columns:1fr 1fr}
+ .tab{height:490px;max-height:490px;overflow:hidden}
+ .footer{flex-direction:row;gap:0}
+}
+
+</style><style>
+.lesson-shell{position:relative;z-index:1;display:grid;grid-template-columns:205px minmax(0,1fr);gap:16px;padding:15px 20px;height:710px}.side{border-radius:19px;background:linear-gradient(160deg,var(--yellow),var(--lime));color:#102847;padding:14px;display:flex;flex-direction:column;overflow:hidden}.side img{width:145px;height:155px;object-fit:contain;align-self:center;filter:drop-shadow(0 8px 8px #1d2e4450)}.side .kicker{color:#3b5111}.side h2{font-size:22px;color:#102847}.side p{font-size:11px}.side .sidefoot{margin-top:auto;background:#102d50;color:#f7f9ed;border-radius:11px;padding:10px;font-size:10px;line-height:1.4}.sidefoot b{color:var(--yellow)}
+.mainpanel{background:linear-gradient(115deg,#fff9ea,#fff0d1);border-radius:22px;padding:18px 20px;color:var(--ink);box-shadow:0 12px 28px #0003;overflow:hidden}.crumb{font-size:10px;color:#63778b;margin-bottom:5px}.mainpanel h1{font-size:28px;color:#112d4e;margin-bottom:7px}.metas{display:flex;gap:7px;margin-bottom:10px}.tabs{display:flex;gap:4px;flex-wrap:wrap;border-bottom:3px solid #ff7a1a55;margin-bottom:11px}.tabs button{border:1px solid #e0d1ae;border-bottom:0;background:transparent;padding:8px 10px;border-radius:9px 9px 0 0;color:#24405d;font-size:10px;font-weight:800}.tabs button.active{background:#102d50;color:white;border-color:#102d50;box-shadow:inset 0 3px var(--yellow)}.tab{display:none;height:530px;overflow:hidden}.tab.active{display:block}.tab h2{font-size:17px}.tab p,.tab li{font-size:11px;line-height:1.4}.tab ul,.tab ol{margin:5px 0 8px;padding-left:18px}.tab li{margin-bottom:4px}.columns{display:grid;grid-template-columns:1fr 1fr;gap:9px}.box{background:#fffdf8;border:1px solid #e6dbc1;border-radius:13px;padding:11px}.box.orange{border-top:4px solid var(--orange)}.box.lime{border-top:4px solid var(--lime)}.box.yellow{border-top:4px solid var(--yellow)}.callout{margin-top:8px;border-left:4px solid var(--orange);background:#ff7a1a12;border-radius:8px;padding:8px 10px;font-size:10px;line-height:1.4}.checklist{display:grid;grid-template-columns:1fr 1fr;gap:6px}.check{background:#fffdf8;border:1px solid #e7dfcc;border-radius:9px;padding:8px;font-size:10px;line-height:1.3}.schedule{width:100%;border-collapse:collapse;font-size:10px}.schedule th,.schedule td{text-align:left;padding:5px 7px;border-bottom:1px solid #e5dbc6}.schedule th{background:#e8efd8}.teacherNote{background:#eaf1dd;border-radius:10px;padding:9px 10px;font-size:10px;line-height:1.4;margin:7px 0}
+@media(max-width:850px){.lesson-shell{height:auto;grid-template-columns:1fr;padding:12px}.side{display:grid;grid-template-columns:100px 1fr;align-items:center}.side img{width:90px;height:95px;grid-row:span 2}.side .sidefoot{grid-column:1/-1}.mainpanel{padding:14px}.tab{height:auto;max-height:none;overflow:visible}.columns,.checklist{grid-template-columns:1fr}}
+</style><style id="leesbaarheid">
+body{font-size:16px}
+.brandline{font-size:15px!important}.topnav a{font-size:15px!important}
+.kicker{font-size:13px!important;letter-spacing:.12em}
+h1{font-size:37px!important;line-height:1.08!important}
+h2{font-size:23px!important;line-height:1.2!important}
+h3{font-size:18px!important;line-height:1.2!important}
+p{font-size:15px!important;line-height:1.48!important}
+.lede{font-size:17px!important;line-height:1.45!important}
+.pill{font-size:14px!important;padding:8px 12px}
+.footer{font-size:13px!important}
+.side h2{font-size:24px!important}.side p{font-size:14px!important;line-height:1.45!important}
+.side .sidefoot{font-size:13px!important;line-height:1.45!important}
+.crumb{font-size:13px!important}
+.mainpanel h1{font-size:32px!important;line-height:1.1!important}
+.tabs button{font-size:13px!important;padding:9px 11px}
+.tab{font-size:15px!important}
+.tab h2{font-size:21px!important}
+.tab p,.tab li{font-size:14px!important;line-height:1.45!important}
+.box h3{font-size:17px!important}
+.callout,.teacherNote{font-size:13px!important;line-height:1.45!important}
+.check{font-size:13px!important;line-height:1.4!important;padding:9px}
+.schedule{font-size:13px!important}
+.schedule th,.schedule td{font-size:13px!important;line-height:1.35!important;padding:6px 7px}
+/* Extra leesbaarheid voor de lesinhoud en AArno's gele zijvlak. */
+.crumb{font-size:15px!important}
+.mainpanel h1{font-size:35px!important}
+.tabs button{font-size:15px!important;padding:10px 12px}
+.tab h2{font-size:24px!important}
+.tab p,.tab li{font-size:17px!important;line-height:1.45!important}
+.box h3{font-size:20px!important}
+.callout,.teacherNote{font-size:15px!important;line-height:1.45!important}
+.check{font-size:15px!important;line-height:1.4!important}
+.schedule,.schedule th,.schedule td{font-size:15px!important;line-height:1.35!important}
+.side .kicker{font-size:16px!important}
+.side h2{font-size:29px!important;line-height:1.16!important}
+.side p{font-size:18px!important;line-height:1.4!important}
+.side .sidefoot{font-size:16px!important;line-height:1.45!important}
+/* Meer ruimte voor de grotere lesletters, zonder een scrollbar te maken. */
+.layout{height:864px!important}
+.top{height:94px!important;padding:10px 28px!important}
+.lesson-shell{height:740px!important}
+.mainpanel{padding:10px 20px!important}
+.tab{height:560px!important;max-height:560px!important}
+.footer{padding:8px 26px!important}
+@media(max-width:850px){.tab{height:auto;max-height:none;overflow:visible}}
+</style>
+</head><body><div class="layout"><header class="top"><img class="logo" src="assets/ter-aa-logo.png" alt="Ter AA"><div class="brandline">K0516 · Opdracht 01 · complete les</div><nav class="topnav"><a href="index.html">Startmenu</a><a href="sbu.html">SBU-verantwoording</a><a class="active" href="les-11.html">Les 11</a></nav></header><div class="lesson-shell"><aside class="side"><img src="assets/aArno-les-11.png" alt="AArno bij les 11: Oefenscan werkplek"><div class="kicker">Les 11 · 24 SBU</div><h2>Oefenscan werkplek</h2><p>Oefenen doe je begeleid en vanaf een veilige plek.</p><div class="sidefoot"><b>Aantal studenten</b><br>1 · individueel<br><br><b>Benodigd</b><br>Goedgekeurde observatieplek of foto’s, oefenscan, checklist en portfolio.</div></aside><main class="mainpanel"><div class="crumb">Keuzedeel Arbo / Opdrachten / 11</div><h1>Oefenscan werkplek</h1><div class="metas"><span class="pill yellow">24 SBU</span><span class="pill">Niveau 2</span><span class="pill orange">Individueel</span></div><nav class="tabs" role="tablist"><button class="active" onclick="tab('start',this)">Start</button><button onclick="tab('doel',this)">Leerdoel</button><button onclick="tab('voorbeelden',this)">Voorbeelden</button><button onclick="tab('opdracht',this)">Aan de slag</button><button onclick="tab('portfolio',this)">Portfolio</button><button onclick="tab('docent',this)">Docent</button></nav><section id="start" class="tab active"><h2>Wat ga je leren?</h2><p>Je oefent onder begeleiding een volledige risicoverkenning op een vooraf goedgekeurde werkplek of met een scenario. Je observeert, noteert en bespreekt; je voert geen onveilige handelingen uit.</p><div class="columns"><article class="box orange"><h3>Situatie 1</h3><p>Kabels, dozen en doorgang</p></article><article class="box lime"><h3>Situatie 2</h3><p>Drukke balie en onduidelijke overdracht</p></article></div><div class="callout"><b>Jouw resultaat:</b> een portfolio-opdracht waarin je laat zien hoe je risico’s herkent, veilig handelt en op tijd bespreekt.</div></section><section id="doel" class="tab"><h2>Leerdoelen en succescriteria</h2><p>Na deze les kun je:</p><ul><li>Ik bereid een risicoverkenning voor met toestemming en duidelijke grenzen.</li><li>Ik observeer een plek systematisch op fysieke en psychosociale risico’s.</li><li>Ik noteer feiten, mogelijke gevolgen en vragen voor de begeleider.</li><li>Ik bespreek prioriteiten en passende maatregelen zonder zelf een risico te veranderen.</li></ul><div class="teacherNote"><b>Veiligheidsgrens:</b> volg altijd de instructie van de werkplek. Bij direct gevaar, twijfel of een taak buiten jouw bevoegdheid: stop, houd afstand als dat nodig is en waarschuw de begeleider.</div><h3>Wanneer is het goed?</h3><p>De student volgt de observatiegrens, noteert feitelijke signalen en bespreekt prioriteiten met de begeleider.</p></section><section id="voorbeelden" class="tab"><h2>Twee uitgewerkte voorbeelden</h2><div class="columns"><article class="box orange"><h3>Kabels, dozen en doorgang</h3><p><b>Situatie:</b> Op een foto van een werkplek staan kabels langs de looproute en dozen bij een deur.</p><p><b>Soort:</b> Oefenscan · inrichting en doorgang</p><p><b>Mogelijk gevolg:</b> De doorgang kan smaller worden en iemand kan struikelen of de uitgang blokkeren.</p><p><b>Veilige stap:</b> Blijf op de observatieplek. Noteer de locatie en bespreek met de begeleider welke procedure geldt.</p><div class="callout">“Ik zie kabels langs de route en dozen bij de deur. Kunt u beoordelen welke actie volgens de locatieafspraak nodig is?”</div></article><article class="box lime"><h3>Drukke balie en onduidelijke overdracht</h3><p><b>Situatie:</b> Een scenario toont meerdere bezoekers, telefoons en taken zonder duidelijke verdeling.</p><p><b>Soort:</b> Oefenscan · werkdruk en communicatie</p><p><b>Mogelijk gevolg:</b> Een melding kan worden gemist en medewerkers kunnen gehaast handelen.</p><p><b>Veilige stap:</b> Beschrijf de taakdruk en vraag hoe de overdracht en prioriteiten zijn afgesproken.</p><div class="callout">“Ik zie meerdere taken tegelijk en geen duidelijke overdracht. Wie bepaalt hier de prioriteit?”</div></article></div><div class="callout"><b>Let op:</b> beschrijf wat je waarneemt. Een voorstel is geen opdracht om zelf iets te veranderen; stem de vervolgstap af met de verantwoordelijke.</div></section><section id="opdracht" class="tab"><h2>Nu jij · Oefenscan werkplek</h2><ol><li>&lt;b&gt;Voorbereiden:&lt;/b&gt; Kies met de docent een toegestane observatieplek of scenario. Spreek vooraf af waar je wel en niet komt.</li><li>Bekijk de route, apparatuur, houding, instructies en taakverdeling zonder iets aan te raken.</li><li>Noteer twee fysieke en twee psychosociale signalen; gebruik concrete woorden en plek-aanduidingen.</li><li>Schrijf per signaal een mogelijk gevolg en welke informatie nog ontbreekt.</li><li>Bespreek met de begeleider welke situatie eerst aandacht vraagt en waarom.</li><li>Vul bij passende risico’s de oefenscan in: waarneming, gevolg, vraag, contactpersoon en afgesproken vervolg.</li><li>&lt;b&gt;Afronden:&lt;/b&gt; Verwerk feedback en schrijf op welke observatie je volgende keer eerder zou zien.</li></ol><div class="columns"><div class="box yellow"><h3>Invulhulp</h3><p>Wat zie ik? · Waar gebeurt het? · Wat kan er gebeuren? · Wat is mijn veilige stap? · Wie betrek ik?</p></div><div class="box"><h3>Veiligheidsafspraak</h3><p>Voer geen handeling uit die niet in jouw instructie of bevoegdheid staat. Vraag hulp wanneer je twijfelt.</p></div></div></section><section id="portfolio" class="tab"><h2>Bewijs voor je portfolio</h2><p>Lever je uitwerking in als tekst, tabel of ingevuld werkblad. Deel alleen materiaal dat volgens de afspraken gebruikt mag worden.</p><div class="checklist"><div class="check">☐ De plek of het scenario is vooraf goedgekeurd.</div><div class="check">☐ Ik bleef binnen de afgesproken observatiegrens.</div><div class="check">☐ Ik noteerde feiten in plaats van oplossingen te veronderstellen.</div><div class="check">☐ Ik benoemde fysieke en psychosociale signalen.</div><div class="check">☐ Ik besprak prioriteit met de begeleider.</div><div class="check">☐ Ik verwerkte feedback in de scan.</div></div><div class="callout"><b>Zelfcontrole:</b> kan een ander aan jouw bewijs zien wat je hebt waargenomen, welke stap je koos en wanneer je hulp inschakelt?</div></section><section id="docent" class="tab"><h2>Lesuitwerking voor de docent · 24 SBU</h2><table class="schedule"><thead><tr><th>Tijd</th><th>Fase</th><th>Didactische aanpak / resultaat</th></tr></thead><tbody><tr><td>1,0</td><td>Start en grenzen</td><td>Kies de plek, check toestemming en spreek observatiegrenzen af.</td></tr><tr><td>2,0</td><td>Herhalen</td><td>Herhaal signalen, gevolgen, meldroutes en het verschil tussen kijken en ingrijpen.</td></tr><tr><td>4,0</td><td>Begeleide observatie</td><td>Student verzamelt waarnemingen op een goedgekeurde plek of in een scenario.</td></tr><tr><td>4,0</td><td>Noteren</td><td>Student vult de oefenscan in met locatie, feiten en mogelijke gevolgen.</td></tr><tr><td>3,0</td><td>Prioriteren</td><td>Bespreek aandacht en urgentie met de begeleider; student neemt geen besluit buiten de rol.</td></tr><tr><td>3,0</td><td>Maatregelen bespreken</td><td>Koppel risico’s aan bestaande instructies en verantwoordelijke personen.</td></tr><tr><td>2,0</td><td>Scan opstellen</td><td>Student werkt een nette conceptscan uit.</td></tr><tr><td>2,0</td><td>Feedback</td><td>Docent bespreekt één sterk punt en één verbeterpunt.</td></tr><tr><td>3,0</td><td>Portfolio en reflectie</td><td>Student verwerkt feedback en levert scan plus reflectie in.</td></tr><tr><th colspan="2">Totaal</th><th>24 SBU</th></tr></tbody></table><div class="teacherNote"><b>Benodigd:</b> Goedgekeurde observatieplek of foto’s, oefenscan, checklist en portfolio. <b>Differentiatie:</b> bied zinsstarters, pictogrammen of een uitgewerkt voorbeeld; laat de student de situatie mondeling voorbespreken. De docent selecteert de plek, controleert deze vooraf en houdt toezicht. Student observeert uitsluitend; geen inspectie van besloten ruimten, elektrische middelen, stoffen of machines zonder expliciete bevoegdheid en procedure.</div><p><b>Formatieve beoordeling:</b> De student volgt de observatiegrens, noteert feitelijke signalen en bespreekt prioriteiten met de begeleider. Geef feedback op één criterium tegelijk en laat de student de aanpassing in het portfolio verwerken.</p></section></main></div><footer class="footer"><span>Ter AA · K0516 · Les 11</span><span>Bron: kwalificatiedossier K0516 · SBB</span></footer></div><script>function tab(id,btn){document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".tabs button").forEach(x=>x.classList.remove("active"));document.getElementById(id).classList.add("active");btn.classList.add("active")}</script><script>(function(){const f=document.querySelector('.layout');function fit(){const s=Math.min((innerWidth-24)/1440,(innerHeight-24)/864);f.style.transform='scale('+s+')';f.style.left=Math.max(0,(innerWidth-1440*s)/2)+'px';f.style.top=Math.max(0,(innerHeight-864*s)/2)+'px'}addEventListener('resize',fit);fit()})();</script>
+</body></html>

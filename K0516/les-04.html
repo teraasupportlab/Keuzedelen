@@ -1,0 +1,101 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Les 04 · Ergonomisch werken</title><style>
+:root{--navy:#07182e;--navy2:#102d50;--blue:#1a4672;--yellow:#f2ed22;--lime:#c7eb43;--orange:#ff7a1a;--cream:#fff8e8;--paper:#fff1d2;--ink:#102847;--muted:#607187;--line:#e5dcc5}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,Arial,sans-serif;color:#edf4ff}body{background:radial-gradient(ellipse at 15% 0,#1a4571 0,transparent 38%),linear-gradient(135deg,#07182e,#050f20);padding:18px}
+a{color:inherit}button{font:inherit;cursor:pointer}.layout{max-width:1440px;margin:auto;min-height:850px;border:1px solid #ffffff20;border-radius:28px;overflow:hidden;position:relative;background:linear-gradient(120deg,#0b2443,#07182e 72%);box-shadow:0 24px 65px #0007}.layout:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.12;background-image:linear-gradient(#c6d7ef1c 1px,transparent 1px),linear-gradient(90deg,#c6d7ef1c 1px,transparent 1px);background-size:34px 34px;mask-image:linear-gradient(130deg,#000,transparent 78%)}
+.top{height:104px;padding:16px 28px;display:flex;align-items:center;gap:20px;border-bottom:1px solid #fff2;position:relative;z-index:1}.logo{width:155px;height:68px;object-fit:contain}.brandline{border-left:1px solid #f2ed2277;padding-left:20px;font-size:13px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:#e2ebf7}.topnav{margin-left:auto;display:flex;gap:8px}.topnav a{padding:9px 13px;border-radius:9px;background:#ffffff10;text-decoration:none;font-size:12px;font-weight:700}.topnav a:hover,.topnav a.active{background:var(--yellow);color:var(--ink)}
+h1,h2,h3,p{margin-top:0}h1{font-size:34px;line-height:1.04;letter-spacing:-.04em;color:#fff;margin-bottom:10px}h2{font-size:19px;line-height:1.15;color:var(--ink);margin-bottom:9px}h3{font-size:14px;color:var(--ink);margin-bottom:7px}p{font-size:13px;line-height:1.48;margin-bottom:9px}
+.kicker{color:var(--yellow);font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;margin:0 0 8px}.lede{color:#d3deed;font-size:15px;max-width:800px}
+.card{background:linear-gradient(145deg,#fffdf8,#f3f0e4);color:var(--ink);border:1px solid #ffffffb9;border-radius:17px;padding:16px;box-shadow:0 9px 22px #0002}.card.orange{border-top:5px solid var(--orange)}.card.lime{border-top:5px solid var(--lime)}.card.yellow{border-top:5px solid var(--yellow)}
+.pill{display:inline-flex;align-items:center;border-radius:99px;padding:7px 11px;background:#c7eb43;font-size:11px;font-weight:800;color:#132640}.pill.orange{background:#ffd0a4}.pill.yellow{background:var(--yellow)}
+.footer{color:#cad7e8;font-size:11px;padding:14px 26px;display:flex;justify-content:space-between;position:relative;z-index:1}
+@media(max-width:850px){body{padding:8px}.layout{min-height:100vh;border-radius:18px}.top{height:auto;flex-wrap:wrap;padding:12px}.logo{width:120px;height:55px}.topnav{width:100%;margin-left:0;flex-wrap:wrap}.topnav a{padding:8px}.footer{flex-direction:column;gap:6px}}
+
+html,body{width:100%;height:100%;min-height:0;overflow:hidden}
+body{padding:0;display:block;position:relative;background:radial-gradient(circle at 8% 12%,#fff8d6 0,transparent 20%),linear-gradient(135deg,#d5deea,#edf1f6)}
+.layout{position:absolute;left:0;top:0;width:1440px;height:850px;min-height:0;max-width:none;margin:0;overflow:hidden;transform-origin:top left;border:2px solid #f2ed22;box-shadow:0 28px 74px #07182e66,0 0 0 8px #ff7a1a25}
+.startgrid{height:705px;min-height:0;box-sizing:border-box;padding:15px 24px;overflow:hidden}
+.guide{height:100%;min-height:0}
+.tasks{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr));height:560px}
+.task{height:100%;min-height:0}
+.sbu-wrap{height:705px;box-sizing:border-box;overflow:hidden;padding:22px 28px}
+.sbu-grid{height:585px;overflow:hidden}
+.tablecard,.reason{height:100%;overflow:hidden}
+.lesson-shell{height:705px;box-sizing:border-box;grid-template-columns:205px minmax(0,1fr);padding:15px 20px}
+.tab{height:490px;max-height:490px;overflow:hidden}
+@media(max-width:1200px){
+ .top{height:104px;flex-wrap:nowrap;padding:16px 28px}
+ .logo{width:155px;height:68px}
+ .brandline{font-size:13px}
+ .topnav{width:auto;margin-left:auto;flex-wrap:nowrap}
+ .startgrid{grid-template-columns:285px minmax(0,1fr);padding:15px 24px;height:705px}
+ .guide{display:block;min-height:0}
+ .guide .owl{width:220px;height:210px}
+ .tasks{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr));height:560px}
+ .task{min-height:0;height:100%}
+ .contenthead{display:flex}
+ .actions{margin-top:0}
+ .sbu-wrap{padding:22px 28px;height:705px}
+ .sbu-grid{grid-template-columns:1.15fr .85fr;height:585px}
+ .sbu-head{display:flex}
+ .lesson-shell{grid-template-columns:205px minmax(0,1fr);height:705px;padding:15px 20px}
+ .side{display:flex;flex-direction:column}
+ .side img{width:145px;height:155px;grid-row:auto}
+ .side .sidefoot{grid-column:auto}
+ .columns,.checklist{grid-template-columns:1fr 1fr}
+ .tab{height:490px;max-height:490px;overflow:hidden}
+ .footer{flex-direction:row;gap:0}
+}
+
+</style><style>
+.lesson-shell{position:relative;z-index:1;display:grid;grid-template-columns:205px minmax(0,1fr);gap:16px;padding:15px 20px;height:710px}.side{border-radius:19px;background:linear-gradient(160deg,var(--yellow),var(--lime));color:#102847;padding:14px;display:flex;flex-direction:column;overflow:hidden}.side img{width:145px;height:155px;object-fit:contain;align-self:center;filter:drop-shadow(0 8px 8px #1d2e4450)}.side .kicker{color:#3b5111}.side h2{font-size:22px;color:#102847}.side p{font-size:11px}.side .sidefoot{margin-top:auto;background:#102d50;color:#f7f9ed;border-radius:11px;padding:10px;font-size:10px;line-height:1.4}.sidefoot b{color:var(--yellow)}
+.mainpanel{background:linear-gradient(115deg,#fff9ea,#fff0d1);border-radius:22px;padding:18px 20px;color:var(--ink);box-shadow:0 12px 28px #0003;overflow:hidden}.crumb{font-size:10px;color:#63778b;margin-bottom:5px}.mainpanel h1{font-size:28px;color:#112d4e;margin-bottom:7px}.metas{display:flex;gap:7px;margin-bottom:10px}.tabs{display:flex;gap:4px;flex-wrap:wrap;border-bottom:3px solid #ff7a1a55;margin-bottom:11px}.tabs button{border:1px solid #e0d1ae;border-bottom:0;background:transparent;padding:8px 10px;border-radius:9px 9px 0 0;color:#24405d;font-size:10px;font-weight:800}.tabs button.active{background:#102d50;color:white;border-color:#102d50;box-shadow:inset 0 3px var(--yellow)}.tab{display:none;height:530px;overflow:hidden}.tab.active{display:block}.tab h2{font-size:17px}.tab p,.tab li{font-size:11px;line-height:1.4}.tab ul,.tab ol{margin:5px 0 8px;padding-left:18px}.tab li{margin-bottom:4px}.columns{display:grid;grid-template-columns:1fr 1fr;gap:9px}.box{background:#fffdf8;border:1px solid #e6dbc1;border-radius:13px;padding:11px}.box.orange{border-top:4px solid var(--orange)}.box.lime{border-top:4px solid var(--lime)}.box.yellow{border-top:4px solid var(--yellow)}.callout{margin-top:8px;border-left:4px solid var(--orange);background:#ff7a1a12;border-radius:8px;padding:8px 10px;font-size:10px;line-height:1.4}.checklist{display:grid;grid-template-columns:1fr 1fr;gap:6px}.check{background:#fffdf8;border:1px solid #e7dfcc;border-radius:9px;padding:8px;font-size:10px;line-height:1.3}.schedule{width:100%;border-collapse:collapse;font-size:10px}.schedule th,.schedule td{text-align:left;padding:5px 7px;border-bottom:1px solid #e5dbc6}.schedule th{background:#e8efd8}.teacherNote{background:#eaf1dd;border-radius:10px;padding:9px 10px;font-size:10px;line-height:1.4;margin:7px 0}
+@media(max-width:850px){.lesson-shell{height:auto;grid-template-columns:1fr;padding:12px}.side{display:grid;grid-template-columns:100px 1fr;align-items:center}.side img{width:90px;height:95px;grid-row:span 2}.side .sidefoot{grid-column:1/-1}.mainpanel{padding:14px}.tab{height:auto;max-height:none;overflow:visible}.columns,.checklist{grid-template-columns:1fr}}
+</style><style id="leesbaarheid">
+body{font-size:16px}
+.brandline{font-size:15px!important}.topnav a{font-size:15px!important}
+.kicker{font-size:13px!important;letter-spacing:.12em}
+h1{font-size:37px!important;line-height:1.08!important}
+h2{font-size:23px!important;line-height:1.2!important}
+h3{font-size:18px!important;line-height:1.2!important}
+p{font-size:15px!important;line-height:1.48!important}
+.lede{font-size:17px!important;line-height:1.45!important}
+.pill{font-size:14px!important;padding:8px 12px}
+.footer{font-size:13px!important}
+.side h2{font-size:24px!important}.side p{font-size:14px!important;line-height:1.45!important}
+.side .sidefoot{font-size:13px!important;line-height:1.45!important}
+.crumb{font-size:13px!important}
+.mainpanel h1{font-size:32px!important;line-height:1.1!important}
+.tabs button{font-size:13px!important;padding:9px 11px}
+.tab{font-size:15px!important}
+.tab h2{font-size:21px!important}
+.tab p,.tab li{font-size:14px!important;line-height:1.45!important}
+.box h3{font-size:17px!important}
+.callout,.teacherNote{font-size:13px!important;line-height:1.45!important}
+.check{font-size:13px!important;line-height:1.4!important;padding:9px}
+.schedule{font-size:13px!important}
+.schedule th,.schedule td{font-size:13px!important;line-height:1.35!important;padding:6px 7px}
+/* Extra leesbaarheid voor de lesinhoud en AArno's gele zijvlak. */
+.crumb{font-size:15px!important}
+.mainpanel h1{font-size:35px!important}
+.tabs button{font-size:15px!important;padding:10px 12px}
+.tab h2{font-size:24px!important}
+.tab p,.tab li{font-size:17px!important;line-height:1.45!important}
+.box h3{font-size:20px!important}
+.callout,.teacherNote{font-size:15px!important;line-height:1.45!important}
+.check{font-size:15px!important;line-height:1.4!important}
+.schedule,.schedule th,.schedule td{font-size:15px!important;line-height:1.35!important}
+.side .kicker{font-size:16px!important}
+.side h2{font-size:29px!important;line-height:1.16!important}
+.side p{font-size:18px!important;line-height:1.4!important}
+.side .sidefoot{font-size:16px!important;line-height:1.45!important}
+/* Meer ruimte voor de grotere lesletters, zonder een scrollbar te maken. */
+.layout{height:864px!important}
+.top{height:94px!important;padding:10px 28px!important}
+.lesson-shell{height:740px!important}
+.mainpanel{padding:10px 20px!important}
+.tab{height:560px!important;max-height:560px!important}
+.footer{padding:8px 26px!important}
+@media(max-width:850px){.tab{height:auto;max-height:none;overflow:visible}}
+</style>
+</head><body><div class="layout"><header class="top"><img class="logo" src="assets/ter-aa-logo.png" alt="Ter AA"><div class="brandline">K0516 · Opdracht 01 · complete les</div><nav class="topnav"><a href="index.html">Startmenu</a><a href="sbu.html">SBU-verantwoording</a><a class="active" href="les-04.html">Les 04</a></nav></header><div class="lesson-shell"><aside class="side"><img src="assets/aArno-les-04.png" alt="AArno bij les 04: Ergonomisch werken"><div class="kicker">Les 04 · 20 SBU</div><h2>Ergonomisch werken</h2><p>Een goede werkplek past bij de taak en de gebruiker.</p><div class="sidefoot"><b>Aantal studenten</b><br>1 · individueel<br><br><b>Benodigd</b><br>Werkplekfoto of gecontroleerde oefenplek, checklist en pen.</div></aside><main class="mainpanel"><div class="crumb">Keuzedeel Arbo / Opdrachten / 04</div><h1>Ergonomisch werken</h1><div class="metas"><span class="pill yellow">20 SBU</span><span class="pill">Niveau 2</span><span class="pill orange">Individueel</span></div><nav class="tabs" role="tablist"><button class="active" onclick="tab('start',this)">Start</button><button onclick="tab('doel',this)">Leerdoel</button><button onclick="tab('voorbeelden',this)">Voorbeelden</button><button onclick="tab('opdracht',this)">Aan de slag</button><button onclick="tab('portfolio',this)">Portfolio</button><button onclick="tab('docent',this)">Docent</button></nav><section id="start" class="tab active"><h2>Wat ga je leren?</h2><p>Je bekijkt hoe de inrichting van een werkplek helpt om prettig en veilig te werken. Je oefent met scherm, stoel, bereik, licht en afwisseling.</p><div class="columns"><article class="box orange"><h3>Situatie 1</h3><p>Scherm te laag en stoel te ver</p></article><article class="box lime"><h3>Situatie 2</h3><p>Reflectie op het beeldscherm</p></article></div><div class="callout"><b>Jouw resultaat:</b> een portfolio-opdracht waarin je laat zien hoe je risico’s herkent, veilig handelt en op tijd bespreekt.</div></section><section id="doel" class="tab"><h2>Leerdoelen en succescriteria</h2><p>Na deze les kun je:</p><ul><li>Ik herken aandachtspunten bij beeldscherm, stoel, werkhoogte, bereik en verlichting.</li><li>Ik controleer een werkplek met een vaste checklist.</li><li>Ik stel alleen onderdelen in die ik mag aanpassen en volg de lokale instructie.</li><li>Ik plan afwisseling en korte beweegmomenten volgens de afspraken.</li></ul><div class="teacherNote"><b>Veiligheidsgrens:</b> volg altijd de instructie van de werkplek. Bij direct gevaar, twijfel of een taak buiten jouw bevoegdheid: stop, houd afstand als dat nodig is en waarschuw de begeleider.</div><h3>Wanneer is het goed?</h3><p>De student gebruikt de checklist zorgvuldig, doet geen ongeoorloofde wijziging en motiveert één werkplekverbetering.</p></section><section id="voorbeelden" class="tab"><h2>Twee uitgewerkte voorbeelden</h2><div class="columns"><article class="box orange"><h3>Scherm te laag en stoel te ver</h3><p><b>Situatie:</b> De gebruiker kijkt omlaag en reikt steeds naar toetsenbord en muis.</p><p><b>Soort:</b> Ergonomie · werkplekinrichting</p><p><b>Mogelijk gevolg:</b> Langdurig reiken of een ongemakkelijke houding kan vermoeidheid geven.</p><p><b>Veilige stap:</b> Controleer de ingestelde richtlijn en vraag toestemming voordat je stoel, scherm of apparatuur verstelt.</p><div class="callout">“Ik moet ver reiken en kijk omlaag. Mag ik de werkplek samen volgens de checklist aanpassen?”</div></article><article class="box lime"><h3>Reflectie op het beeldscherm</h3><p><b>Situatie:</b> Een lamp of raam weerspiegelt sterk in het scherm, waardoor de gebruiker anders gaat zitten.</p><p><b>Soort:</b> Ergonomie · licht en zicht</p><p><b>Mogelijk gevolg:</b> De gebruiker kan turen of een gedraaide houding aannemen.</p><p><b>Veilige stap:</b> Verander niet zomaar de elektrische installatie. Bespreek een veilige plek, schermpositie of toegestane zonwering.</p><div class="callout">“Ik zie veel weerspiegeling. Welke aanpassing is hier toegestaan?”</div></article></div><div class="callout"><b>Let op:</b> beschrijf wat je waarneemt. Een voorstel is geen opdracht om zelf iets te veranderen; stem de vervolgstap af met de verantwoordelijke.</div></section><section id="opdracht" class="tab"><h2>Nu jij · Ergonomisch werken</h2><ol><li>&lt;b&gt;Voorbereiden:&lt;/b&gt; Kies een werkplek die de docent heeft vrijgegeven of gebruik een foto.</li><li>Loop de checklist langs: scherm, stoel, voeten, toetsenbord, muis, bereik, licht en kabels.</li><li>Noteer wat goed staat en wat aandacht vraagt; verander nog niets zonder toestemming.</li><li>Kies één verbetering die binnen de werkafspraken valt en bespreek die met de begeleider.</li><li>Voer een toegestane aanpassing uit of maak een schets van de voorgestelde verbetering.</li><li>&lt;b&gt;Afronden:&lt;/b&gt; Maak een afwisselplan met taken en korte beweegmomenten volgens de afspraken van de werkplek.</li></ol><div class="columns"><div class="box yellow"><h3>Invulhulp</h3><p>Wat zie ik? · Waar gebeurt het? · Wat kan er gebeuren? · Wat is mijn veilige stap? · Wie betrek ik?</p></div><div class="box"><h3>Veiligheidsafspraak</h3><p>Voer geen handeling uit die niet in jouw instructie of bevoegdheid staat. Vraag hulp wanneer je twijfelt.</p></div></div></section><section id="portfolio" class="tab"><h2>Bewijs voor je portfolio</h2><p>Lever je uitwerking in als tekst, tabel of ingevuld werkblad. Deel alleen materiaal dat volgens de afspraken gebruikt mag worden.</p><div class="checklist"><div class="check">☐ Ik heb de werkplek met de checklist beoordeeld.</div><div class="check">☐ Ik noemde minstens twee aandachtspunten.</div><div class="check">☐ Ik heb geen niet-toegestane aanpassing gedaan.</div><div class="check">☐ Ik legde één verbetering uit.</div><div class="check">☐ Ik maakte een plan voor afwisseling.</div><div class="check">☐ Ik beschreef wat ik met de begeleider heb afgestemd.</div></div><div class="callout"><b>Zelfcontrole:</b> kan een ander aan jouw bewijs zien wat je hebt waargenomen, welke stap je koos en wanneer je hulp inschakelt?</div></section><section id="docent" class="tab"><h2>Lesuitwerking voor de docent · 20 SBU</h2><table class="schedule"><thead><tr><th>Tijd</th><th>Fase</th><th>Didactische aanpak / resultaat</th></tr></thead><tbody><tr><td>1,0</td><td>Start</td><td>Bespreek ergonomie als passend maken van de werkplek bij taak en gebruiker.</td></tr><tr><td>3,0</td><td>Richtlijnen</td><td>Bekijk voorbeelden van scherm, stoel, invoermiddelen, bereik en verlichting.</td></tr><tr><td>4,0</td><td>Werkplekcheck</td><td>Studenten beoordelen in duo’s een foto of gecontroleerde werkplek met checklist.</td></tr><tr><td>4,0</td><td>Aanpassen</td><td>Oefen alleen toegestane, eenvoudige instellingen en bespreek toestemming.</td></tr><tr><td>3,0</td><td>Afwisseling</td><td>Maak een werkritme met taakafwisseling en beweegmomenten volgens lokaal beleid.</td></tr><tr><td>3,0</td><td>Eigen advies</td><td>Student schrijft een kort advies met waarneming, voorstel en vraag aan begeleider.</td></tr><tr><td>2,0</td><td>Portfolio</td><td>Lever checklist en advies in; bespreek één leerpunt.</td></tr><tr><th colspan="2">Totaal</th><th>20 SBU</th></tr></tbody></table><div class="teacherNote"><b>Benodigd:</b> Werkplekfoto of gecontroleerde oefenplek, checklist en pen. <b>Differentiatie:</b> bied zinsstarters, pictogrammen of een uitgewerkt voorbeeld; laat de student de situatie mondeling voorbespreken. Gebruik de actuele instructies van de school of stageplek voor werkplekinstelling. Er is geen universele instelling die voor iedereen passend is. Student past niets aan dat buiten de eigen bevoegdheid valt.</div><p><b>Formatieve beoordeling:</b> De student gebruikt de checklist zorgvuldig, doet geen ongeoorloofde wijziging en motiveert één werkplekverbetering. Geef feedback op één criterium tegelijk en laat de student de aanpassing in het portfolio verwerken.</p></section></main></div><footer class="footer"><span>Ter AA · K0516 · Les 04</span><span>Bron: kwalificatiedossier K0516 · SBB</span></footer></div><script>function tab(id,btn){document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".tabs button").forEach(x=>x.classList.remove("active"));document.getElementById(id).classList.add("active");btn.classList.add("active")}</script><script>(function(){const f=document.querySelector('.layout');function fit(){const s=Math.min((innerWidth-24)/1440,(innerHeight-24)/864);f.style.transform='scale('+s+')';f.style.left=Math.max(0,(innerWidth-1440*s)/2)+'px';f.style.top=Math.max(0,(innerHeight-864*s)/2)+'px'}addEventListener('resize',fit);fit()})();</script>
+</body></html>
